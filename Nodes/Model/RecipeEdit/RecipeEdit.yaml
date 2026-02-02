@@ -1572,7 +1572,7 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
-- Name: CustomPattern
+- Name: CustomPatternNormal
   Type: BaseObjectType
   Children:
   - Name: NumCasesCustom
@@ -1594,7 +1594,7 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         ReferenceType: HasParameter
-        Value: "{0}*13.02083333333333"
+        Value: "{0}*{1}"
       - Name: ns=7;Source0
         Type: BaseDataVariableType
         DataType: BaseDataType
@@ -1604,6 +1604,15 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/ProdW"
+      - Name: ns=7;Source1
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../PixelScaling"
   - Name: Height
     Type: BaseDataVariableType
     DataType: Float
@@ -1616,7 +1625,7 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         ReferenceType: HasParameter
-        Value: "{0}*13.02083333333333"
+        Value: "{0}*{1}"
       - Name: ns=7;Source0
         Type: BaseDataVariableType
         DataType: BaseDataType
@@ -1626,6 +1635,15 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/ProdL"
+      - Name: ns=7;Source1
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../PixelScaling"
   - Name: Rot90
     Id: g=5d69ebcee0c0df89beda4230b6b0ff33
     Type: BaseDataVariableType
@@ -1669,3 +1687,140 @@ Children:
     DataType: Boolean
     ValueRank: OneDimension
     ArrayDimensions: [64]
+  - Name: RunSnap
+    Id: g=4eeee5c35503e358288562209bcaae3a
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: PixelScaling
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 12.0
+  - Name: SnapMode
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: CustomPatternFlipped
+  Type: BaseObjectType
+  Children:
+  - Name: NumCasesCustom
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: CaseSelected
+    Id: g=8b62bae41577c41fd4c5424f05b69b7c
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Width
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 208.0
+    Children:
+    - Name: ExpressionEvaluator1
+      Type: ExpressionEvaluator
+      Children:
+      - Name: Expression
+        Type: BaseDataVariableType
+        DataType: String
+        ReferenceType: HasParameter
+        Value: "{0}*{1}"
+      - Name: ns=7;Source0
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/ProdW"
+      - Name: ns=7;Source1
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../PixelScaling"
+  - Name: Height
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 104.0
+    Children:
+    - Name: ExpressionEvaluator1
+      Type: ExpressionEvaluator
+      Children:
+      - Name: Expression
+        Type: BaseDataVariableType
+        DataType: String
+        ReferenceType: HasParameter
+        Value: "{0}*{1}"
+      - Name: ns=7;Source0
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/ProdL"
+      - Name: ns=7;Source1
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../PixelScaling"
+  - Name: Rot90
+    Id: g=0bfaa718203a1c8f9bae8f6f48e094aa
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ValueRank: OneDimension
+    ArrayDimensions: [64]
+  - Name: WidthArray
+    Id: g=51dc0a47137df7765c8b61921a79fbf8
+    Type: BaseDataVariableType
+    DataType: Float
+    ValueRank: OneDimension
+    ArrayDimensions: [64]
+  - Name: HeightArray
+    Id: g=665c66b63cbb2770a3fb3aa9b3b16b09
+    Type: BaseDataVariableType
+    DataType: Float
+    ValueRank: OneDimension
+    ArrayDimensions: [64]
+  - Name: XHold
+    Id: g=4d89158f417391d5773c7056821fffe5
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: YHold
+    Id: g=1f88e75c4903febe502df83d37100e75
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: LeftMargin
+    Id: g=6410f5b856759d4c25802c38945a41f9
+    Type: BaseDataVariableType
+    DataType: Size
+    ValueRank: OneDimension
+    ArrayDimensions: [64]
+  - Name: TopMargin
+    Id: g=c32e3cce1d1d22d6b7e5c2317eb59dda
+    Type: BaseDataVariableType
+    DataType: Size
+    ValueRank: OneDimension
+    ArrayDimensions: [64]
+  - Name: Rotate
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ValueRank: OneDimension
+    ArrayDimensions: [64]
+  - Name: RunSnap
+    Id: g=f360409432d5d7136f08e525c18c9a67
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: PixelScaling
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 12.0
+  - Name: SnapMode
+    Type: BaseDataVariableType
+    DataType: Boolean

@@ -15027,7 +15027,7 @@ Children:
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/NumCasesCustom"
+          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/NumCasesCustom"
       - Name: ns=7;Source1
         Type: BaseDataVariableType
         DataType: BaseDataType

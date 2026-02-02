@@ -24,7 +24,7 @@ using FTOptix.SerialPort;
 using FTOptix.Core;
 #endregion
 
-public class Add_Sub_Cases : BaseNetLogic
+public class NormalCustomScript : BaseNetLogic
 {
     private const int MinCount = 1;
     private const int MaxCount = 62;
@@ -32,14 +32,101 @@ public class Add_Sub_Cases : BaseNetLogic
     private const string BaseBoxTemplateName = "BaseBox1";
     private const string CaseLocationsTemplateName = "CaseLocations1";
 
-    private const string CustomPatternPath = "Model/RecipeEdit/CustomPattern";
+    private const string CustomPatternPath = "Model/RecipeEdit/CustomPatternNormal";
+
+    private DelayedTask rebuildTask;
 
     public override void Start()
     {
+        // Rebuild UI elements when popup opens (e.g. after close/reopen).
+        // NumCasesCustom persists; BaseBox/CaseLocations are recreated from YAML with only instance 1.
+        if (rebuildTask != null)
+        {
+            rebuildTask.Dispose();
+            rebuildTask = null;
+        }
+        rebuildTask = new DelayedTask(Rebuild, 100, LogicObject);
+        rebuildTask.Start();
     }
 
     public override void Stop()
     {
+        if (rebuildTask != null)
+        {
+            rebuildTask.Dispose();
+            rebuildTask = null;
+        }
+    }
+
+    private void Rebuild()
+    {
+        var targetCount = GetCurrentCount();
+        if (targetCount < MinCount || targetCount > MaxCount)
+            return;
+
+        var baseBox1 = FindNodeRecursive(LogicObject, BaseBoxTemplateName) as IUAObject;
+        var caseLocations1 = FindNodeRecursive(LogicObject, CaseLocationsTemplateName) as IUAObject;
+
+        if (baseBox1 == null || caseLocations1 == null)
+            return;
+
+        var baseBoxContainer = baseBox1.Parent;
+        var caseLocationsContainer = caseLocations1.Parent;
+
+        if (baseBoxContainer == null || caseLocationsContainer == null)
+            return;
+
+        int currentCount = CountExistingElements(baseBoxContainer, "BaseBox");
+
+        for (int n = currentCount + 1; n <= targetCount; n++)
+        {
+            try
+            {
+                if (baseBoxContainer.Get($"BaseBox{n}") == null)
+                {
+                    var newBaseBox = InformationModel.MakeObject($"BaseBox{n}", baseBox1.ObjectType.NodeId);
+                    baseBoxContainer.Add(newBaseBox);
+                    var idxVar = newBaseBox.GetVariable("Index");
+                    if (idxVar != null)
+                        idxVar.Value = (short)n;
+                }
+
+                if (caseLocationsContainer.Get($"CaseLocations{n}") == null)
+                {
+                    var newCaseLocations = InformationModel.MakeObject($"CaseLocations{n}", caseLocations1.ObjectType.NodeId);
+                    caseLocationsContainer.Add(newCaseLocations);
+                    var idxVar = newCaseLocations.GetVariable("Index");
+                    if (idxVar != null)
+                        idxVar.Value = (short)n;
+                }
+
+                // Do NOT call InitializeArraysForIndex here - model arrays already have persisted data.
+            }
+            catch (Exception ex)
+            {
+                Log.Warning(nameof(NormalCustomScript), $"Rebuild: failed for index {n}: {ex.Message}");
+            }
+        }
+
+        var sel = GetCaseSelected();
+        SetCaseSelected(sel >= 1 && sel <= targetCount ? sel : 1);
+    }
+
+    private static int CountExistingElements(IUANode container, string prefix)
+    {
+        if (container == null) return 0;
+        int max = 0;
+        foreach (var child in container.Children)
+        {
+            var name = child?.BrowseName ?? "";
+            if (name.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) && name.Length > prefix.Length)
+            {
+                var suffix = name.Substring(prefix.Length);
+                if (int.TryParse(suffix, NumberStyles.Integer, CultureInfo.InvariantCulture, out var n) && n > max)
+                    max = n;
+            }
+        }
+        return max;
     }
 
     [ExportMethod]
@@ -56,7 +143,7 @@ public class Add_Sub_Cases : BaseNetLogic
 
         if (baseBox1 == null || caseLocations1 == null)
         {
-            Log.Error(nameof(Add_Sub_Cases), $"Templates '{BaseBoxTemplateName}' or '{CaseLocationsTemplateName}' not found.");
+            Log.Error(nameof(NormalCustomScript), $"Templates '{BaseBoxTemplateName}' or '{CaseLocationsTemplateName}' not found.");
             return;
         }
 
@@ -65,7 +152,7 @@ public class Add_Sub_Cases : BaseNetLogic
 
         if (baseBoxContainer == null || caseLocationsContainer == null)
         {
-            Log.Error(nameof(Add_Sub_Cases), "Could not resolve BaseBox or CaseLocations container.");
+            Log.Error(nameof(NormalCustomScript), "Could not resolve BaseBox or CaseLocations container.");
             return;
         }
 
@@ -99,7 +186,7 @@ public class Add_Sub_Cases : BaseNetLogic
         }
         catch (Exception ex)
         {
-            Log.Error(nameof(Add_Sub_Cases), $"Add failed: {ex.Message}");
+            Log.Error(nameof(NormalCustomScript), $"Add failed: {ex.Message}");
         }
     }
 
@@ -131,6 +218,143 @@ public class Add_Sub_Cases : BaseNetLogic
             numCasesVar.Value = count - 1;
 
         SetCaseSelected(count - 1);
+    }
+
+    [ExportMethod]
+    public void Snap()
+    {
+        Log.Info(nameof(NormalCustomScript), "Snap() called");
+
+        if (!GetSnapMode())
+        {
+            Log.Info(nameof(NormalCustomScript), "Snap: SnapMode off, returning");
+            return;
+        }
+
+        var cp = Project.Current?.Get($"{CustomPatternPath}");
+        if (cp == null)
+        {
+            Log.Warning(nameof(NormalCustomScript), "Snap: CustomPattern not found");
+            return;
+        }
+
+        int i = GetCaseSelected();
+        int numCases = GetCurrentCount();
+        if (i < 1 || i > numCases || numCases < 2)
+        {
+            Log.Info(nameof(NormalCustomScript), $"Snap: early return (CaseSelected={i}, NumCases={numCases})");
+            return;
+        }
+
+        float currTop = GetArrayFloat(cp.GetVariable("TopMargin"), i);
+        float currLeft = GetArrayFloat(cp.GetVariable("LeftMargin"), i);
+        float myW = GetArrayFloat(cp.GetVariable("WidthArray"), i);
+        float myH = GetArrayFloat(cp.GetVariable("HeightArray"), i);
+        bool myRot = GetArrayBool(cp.GetVariable("Rot90"), i);
+
+        float bestLeft = currLeft, bestTop = currTop;
+        float bestDistSq = float.MaxValue;
+
+        for (int j = 1; j <= numCases; j++)
+        {
+            if (j == i) continue;
+
+            float jLeft = GetArrayFloat(cp.GetVariable("LeftMargin"), j);
+            float jTop = GetArrayFloat(cp.GetVariable("TopMargin"), j);
+            float jW = GetArrayFloat(cp.GetVariable("WidthArray"), j);
+            float jH = GetArrayFloat(cp.GetVariable("HeightArray"), j);
+            bool jRot = GetArrayBool(cp.GetVariable("Rot90"), j);
+
+            float jExtW = jW;
+            float jExtH = jH;
+            float myExtW = myRot ? myH : myW;
+            float myExtH = myRot ? myW : myH;
+
+            float[] candidates = {
+                jLeft + jExtW, jTop,           /* right of j */
+                jLeft, jTop + jExtH,           /* bottom of j */
+                jLeft - myExtW, jTop,          /* left of j */
+                jLeft, jTop - myExtH           /* above j */
+            };
+
+            for (int k = 0; k < 4; k++)
+            {
+                float snapLeft = candidates[k * 2];
+                float snapTop = candidates[k * 2 + 1];
+                float dx = currLeft - snapLeft;
+                float dy = currTop - snapTop;
+                float distSq = dx * dx + dy * dy;
+                if (distSq < bestDistSq)
+                {
+                    bestDistSq = distSq;
+                    bestLeft = snapLeft;
+                    bestTop = snapTop;
+                }
+            }
+        }
+
+        SetArrayElement(cp.GetVariable("LeftMargin"), i, bestLeft);
+        SetArrayElement(cp.GetVariable("TopMargin"), i, bestTop);
+
+        var pxVar = cp.GetVariable("PixelScaling");
+        float pxPerInch = pxVar != null ? ToFloat(pxVar.Value) : 12f;
+        if (pxPerInch > 0)
+        {
+            var xHoldVar = cp.GetVariable("XHold");
+            var yHoldVar = cp.GetVariable("YHold");
+            if (xHoldVar != null) xHoldVar.Value = bestTop / pxPerInch;
+            if (yHoldVar != null) yHoldVar.Value = bestLeft / pxPerInch;
+        }
+
+        Log.Info(nameof(NormalCustomScript), $"Snap: applied for case {i} -> ({bestLeft:F1}, {bestTop:F1})");
+    }
+
+    private bool GetSnapMode()
+    {
+        var v = Project.Current?.GetVariable($"{CustomPatternPath}/SnapMode");
+        if (v?.Value == null) return false;
+        object val = v.Value;
+        if (val is UAValue uav) val = uav.Value;
+        return val is bool b && b;
+    }
+
+    private int GetCaseSelected()
+    {
+        var v = Project.Current?.GetVariable($"{CustomPatternPath}/CaseSelected");
+        return v != null ? ToInt(v.Value) : 0;
+    }
+
+    private static float GetArrayFloat(IUAVariable arr, int index)
+    {
+        if (arr == null || index < 0) return 0f;
+        object val = arr.Value;
+        if (val == null) return 0f;
+        if (val is UAValue uav) val = uav.Value;
+        if (val is float[] fa && fa.Length > index) return fa[index];
+        if (val is Array a && a.Length > index)
+        {
+            var e = a.GetValue(index);
+            if (e is UAValue uv) e = uv.Value;
+            if (e is float f) return f;
+            if (e is double d) return (float)d;
+        }
+        return 0f;
+    }
+
+    private static bool GetArrayBool(IUAVariable arr, int index)
+    {
+        if (arr == null || index < 0) return false;
+        object val = arr.Value;
+        if (val == null) return false;
+        if (val is UAValue uav) val = uav.Value;
+        if (val is bool[] ba && ba.Length > index) return ba[index];
+        if (val is Array a && a.Length > index)
+        {
+            var e = a.GetValue(index);
+            if (e is UAValue uv) e = uv.Value;
+            if (e is bool b) return b;
+        }
+        return false;
     }
 
     private void SetCaseSelected(int value)
@@ -201,7 +425,7 @@ public class Add_Sub_Cases : BaseNetLogic
         }
         catch (Exception ex)
         {
-            Log.Warning(nameof(Add_Sub_Cases), $"Array init for index {n} failed: {ex.Message}");
+            Log.Warning(nameof(NormalCustomScript), $"Array init for index {n} failed: {ex.Message}");
         }
     }
 
@@ -222,7 +446,7 @@ public class Add_Sub_Cases : BaseNetLogic
         }
         catch (Exception ex)
         {
-            Log.Warning(nameof(Add_Sub_Cases), $"SetArrayElement failed: {ex.Message}");
+            Log.Warning(nameof(NormalCustomScript), $"SetArrayElement failed: {ex.Message}");
         }
     }
 
@@ -280,7 +504,7 @@ public class Add_Sub_Cases : BaseNetLogic
         }
         catch (Exception ex)
         {
-            Log.Warning(nameof(Add_Sub_Cases), $"CopyArrayElement failed: {ex.Message}");
+            Log.Warning(nameof(NormalCustomScript), $"CopyArrayElement failed: {ex.Message}");
         }
     }
 

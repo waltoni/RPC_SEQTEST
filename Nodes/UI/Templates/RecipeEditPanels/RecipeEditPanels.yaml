@@ -9013,6 +9013,205 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RecipeEditVariables/NewRecipe"
+      - Name: MomentaryButton6
+        Type: MomentaryButton
+        Children:
+        - Name: Active
+          Type: BaseDataVariableType
+          DataType: Boolean
+          AccessLevel: Read
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"CustomN"}
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 100.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 40.0
+        - Name: BackgroundColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#1b3154"
+          Children:
+          - Name: ConditionalConverter1
+            Type: ConditionalConverter
+            Children:
+            - Name: Condition
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasSource
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Expression
+                  Type: BaseDataVariableType
+                  DataType: String
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: "{0} == 4"
+                - Name: ns=7;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/FlipType"
+            - Name: TrueValue
+              Type: BaseDataVariableType
+              DataType: Color
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "#1b3154"
+            - Name: FalseValue
+              Type: BaseDataVariableType
+              DataType: Color
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "#dddddd"
+        - Name: TextColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#ffffff"
+          Children:
+          - Name: ConditionalConverter1
+            Type: ConditionalConverter
+            Children:
+            - Name: Condition
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasSource
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Expression
+                  Type: BaseDataVariableType
+                  DataType: String
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: "{0} == 4"
+                - Name: ns=7;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/FlipType"
+            - Name: TrueValue
+              Type: BaseDataVariableType
+              DataType: Color
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "#ffffff"
+            - Name: FalseValue
+              Type: BaseDataVariableType
+              DataType: Color
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "#000000"
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 2.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: MouseClickEventHandler1
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Type: BaseObjectType
+              Children:
+              - Name: ns=7;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/UICommands"
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=7;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "OpenDialog"
+              - Name: InputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: Dialog
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Description: {"NamespaceIndex":9,"TextId":"OpenDialogDialogDescription"}
+                  Value: "/Objects/RPC_SEQTEST/UI/PopUps/CustomPatternNormal"
+                - Name: AliasNode
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Description: {"NamespaceIndex":9,"TextId":"OpenDialogAliasNodeDescription"}
+                  ValueRank: ScalarOrOneDimension
+                - Name: ParentItem
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Description: {"NamespaceIndex":9,"TextId":"OpenDialogParentItemDescription"}
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../..@NodeId"
+              - Name: OutputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: DialogNodeId
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Description: {"NamespaceIndex":9,"TextId":"OpenDialogDialogNodeIdDescription"}
+          - Name: EventArguments
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Type: PropertyType
+              DataType: ByteString
+            - Name: EventType
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceNode
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceName
+              Type: PropertyType
+              DataType: String
+            - Name: Time
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: ReceiveTime
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: Message
+              Type: PropertyType
+              DataType: LocalizedText
+            - Name: Severity
+              Type: PropertyType
+              DataType: UInt16
     - Name: Setting
       Type: TableHeader
       Children:
@@ -21841,7 +22040,7 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RecipeEditVariables/NewRecipe"
-      - Name: MomentaryButton5
+      - Name: MomentaryButton6
         Type: MomentaryButton
         Children:
         - Name: Active
@@ -21852,7 +22051,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"Custom"}
+          Value: {"LocaleId":"en-US","Text":"CustomF"}
         - Name: Width
           Type: BaseVariableType
           DataType: Size
@@ -21991,7 +22190,7 @@ Children:
                   Type: BaseDataVariableType
                   DataType: NodeId
                   Description: {"NamespaceIndex":9,"TextId":"OpenDialogDialogDescription"}
-                  Value: "/Objects/RPC_SEQTEST/UI/PopUps/CustomPattern"
+                  Value: "/Objects/RPC_SEQTEST/UI/PopUps/CustomPatternFlipped"
                 - Name: AliasNode
                   Type: BaseDataVariableType
                   DataType: NodeId
@@ -51055,7 +51254,7 @@ Children:
           DataType: LocalizedText
           ReferenceType: HasParameter
           ModellingRule: Optional
-          Value: {"LocaleId":"","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/WidthArray[{0}]"}
+          Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/WidthArray[{0}]"}
         - Name: ns=7;Source0
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -51081,7 +51280,7 @@ Children:
           DataType: LocalizedText
           ReferenceType: HasParameter
           ModellingRule: Optional
-          Value: {"LocaleId":"","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/LeftMargin[{0}]"}
+          Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/LeftMargin[{0}]"}
         - Name: ns=7;Source0
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -51112,7 +51311,7 @@ Children:
           DataType: LocalizedText
           ReferenceType: HasParameter
           ModellingRule: Optional
-          Value: {"LocaleId":"","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/TopMargin[{0}]"}
+          Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/TopMargin[{0}]"}
         - Name: ns=7;Source0
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -51152,7 +51351,7 @@ Children:
           DataType: LocalizedText
           ReferenceType: HasParameter
           ModellingRule: Optional
-          Value: {"LocaleId":"","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/HeightArray[{0}]"}
+          Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/HeightArray[{0}]"}
         - Name: ns=7;Source0
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -51205,7 +51404,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/CaseSelected"
+              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/CaseSelected"
       - Name: TrueValue
         Type: BaseDataVariableType
         DataType: Color
@@ -51248,7 +51447,7 @@ Children:
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/NumCasesCustom"
+          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/NumCasesCustom"
       - Name: ns=7;Source1
         Type: BaseDataVariableType
         DataType: BaseDataType
@@ -51343,7 +51542,7 @@ Children:
             Type: BaseDataVariableType
             DataType: VariablePointer
             Description: {"NamespaceIndex":7,"TextId":"SetVariableToModifyDescription"}
-            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/CaseSelected"
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/CaseSelected"
           - Name: Value
             Type: BaseDataVariableType
             DataType: Int32
@@ -51422,7 +51621,7 @@ Children:
           - Name: VariableToModify
             Type: BaseDataVariableType
             DataType: VariablePointer
-            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/XHold"
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/XHold"
           - Name: Value
             Type: BaseDataVariableType
             DataType: Float
@@ -51435,7 +51634,7 @@ Children:
                 DataType: String
                 ReferenceType: HasParameter
                 ModellingRule: Optional
-                Value: "  round(({0}/13.02083333333333)/0.125)*0.125"
+                Value: "{0}/{1}"
               - Name: ns=7;Source0
                 Type: BaseDataVariableType
                 DataType: BaseDataType
@@ -51453,7 +51652,7 @@ Children:
                       DataType: LocalizedText
                       ReferenceType: HasParameter
                       ModellingRule: Optional
-                      Value: {"LocaleId":"","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/TopMargin[{0}]"}
+                      Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/TopMargin[{0}]"}
                     - Name: ns=7;Source0
                       Type: BaseDataVariableType
                       DataType: BaseDataType
@@ -51462,7 +51661,16 @@ Children:
                       - Name: DynamicLink
                         Type: DynamicLink
                         DataType: NodePath
-                        Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/CaseSelected"
+                        Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/CaseSelected"
+              - Name: ns=7;Source1
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/PixelScaling"
           - Name: ArrayIndex
             Type: BaseDataVariableType
             DataType: UInt32
@@ -51489,7 +51697,7 @@ Children:
           - Name: VariableToModify
             Type: BaseDataVariableType
             DataType: VariablePointer
-            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/YHold"
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/YHold"
           - Name: Value
             Type: BaseDataVariableType
             DataType: Float
@@ -51502,7 +51710,7 @@ Children:
                 DataType: String
                 ReferenceType: HasParameter
                 ModellingRule: Optional
-                Value: "  round(({0}/13.02083333333333)/0.125)*0.125"
+                Value: "{0}/{1}"
               - Name: ns=7;Source0
                 Type: BaseDataVariableType
                 DataType: BaseDataType
@@ -51520,7 +51728,7 @@ Children:
                       DataType: LocalizedText
                       ReferenceType: HasParameter
                       ModellingRule: Optional
-                      Value: {"LocaleId":"","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/LeftMargin[{0}]"}
+                      Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/LeftMargin[{0}]"}
                     - Name: ns=7;Source0
                       Type: BaseDataVariableType
                       DataType: BaseDataType
@@ -51529,7 +51737,16 @@ Children:
                       - Name: DynamicLink
                         Type: DynamicLink
                         DataType: NodePath
-                        Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/CaseSelected"
+                        Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/CaseSelected"
+              - Name: ns=7;Source1
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/PixelScaling"
           - Name: ArrayIndex
             Type: BaseDataVariableType
             DataType: UInt32
@@ -51556,7 +51773,7 @@ Children:
           - Name: VariableToModify
             Type: BaseDataVariableType
             DataType: VariablePointer
-            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/TopMargin"
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/TopMargin"
           - Name: Value
             Type: BaseDataVariableType
             DataType: Size
@@ -51569,7 +51786,7 @@ Children:
                 DataType: String
                 ReferenceType: HasParameter
                 ModellingRule: Optional
-                Value: "{0}*13.02083333333333"
+                Value: "{0}*{1}"
               - Name: ns=7;Source0
                 Type: BaseDataVariableType
                 DataType: BaseDataType
@@ -51578,7 +51795,16 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/XHold"
+                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/XHold"
+              - Name: ns=7;Source1
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/PixelScaling"
           - Name: ArrayIndex
             Type: BaseDataVariableType
             DataType: UInt32
@@ -51587,7 +51813,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/CaseSelected"
+              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/CaseSelected"
       - Name: MethodContainer4
         Type: BaseObjectType
         Children:
@@ -51610,7 +51836,7 @@ Children:
           - Name: VariableToModify
             Type: BaseDataVariableType
             DataType: VariablePointer
-            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/LeftMargin"
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/LeftMargin"
           - Name: Value
             Type: BaseDataVariableType
             DataType: Size
@@ -51623,7 +51849,7 @@ Children:
                 DataType: String
                 ReferenceType: HasParameter
                 ModellingRule: Optional
-                Value: "{0}*13.02083333333333"
+                Value: "{0}*{1}"
               - Name: ns=7;Source0
                 Type: BaseDataVariableType
                 DataType: BaseDataType
@@ -51632,7 +51858,16 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/YHold"
+                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/YHold"
+              - Name: ns=7;Source1
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/PixelScaling"
           - Name: ArrayIndex
             Type: BaseDataVariableType
             DataType: UInt32
@@ -51641,7 +51876,41 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/CaseSelected"
+              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/CaseSelected"
+      - Name: MethodContainer5
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Description: {"NamespaceIndex":7,"TextId":"SetVariableToModifyDescription"}
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/RunSnap"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Description: {"NamespaceIndex":7,"TextId":"SetValueDescription"}
+            Value: true
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Description: {"NamespaceIndex":7,"TextId":"SetArrayIndexDescription"}
+            ValueRank: ScalarOrOneDimension
     - Name: EventArguments
       Type: MouseUpEvent
       Children:
@@ -51833,7 +52102,7 @@ Children:
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0}/13.02083333333333"
+              Value: "{0}/{1}"
             - Name: ns=7;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -51851,7 +52120,7 @@ Children:
                     DataType: LocalizedText
                     ReferenceType: HasParameter
                     ModellingRule: Optional
-                    Value: {"LocaleId":"","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/TopMargin[{0}]"}
+                    Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/TopMargin[{0}]"}
                   - Name: ns=7;Source0
                     Type: BaseDataVariableType
                     DataType: BaseDataType
@@ -51861,6 +52130,15 @@ Children:
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "../../../../../../../../../Index"
+            - Name: ns=7;Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/PixelScaling"
         - Name: Width
           Type: BaseVariableType
           DataType: Size
@@ -51950,7 +52228,7 @@ Children:
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0}/13.02083333333333"
+              Value: "{0}/{1}"
             - Name: ns=7;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -51968,7 +52246,7 @@ Children:
                     DataType: LocalizedText
                     ReferenceType: HasParameter
                     ModellingRule: Optional
-                    Value: {"LocaleId":"","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/LeftMargin[{0}]"}
+                    Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/LeftMargin[{0}]"}
                   - Name: ns=7;Source0
                     Type: BaseDataVariableType
                     DataType: BaseDataType
@@ -51978,6 +52256,15 @@ Children:
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "../../../../../../../../../Index"
+            - Name: ns=7;Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/PixelScaling"
         - Name: Width
           Type: BaseVariableType
           DataType: Size
@@ -52058,7 +52345,7 @@ Children:
         - Name: DynamicLink
           Type: DynamicLink
           DataType: NodePath
-          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/NumCasesCustom"
+          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/NumCasesCustom"
       - Name: ns=7;Source1
         Type: BaseDataVariableType
         DataType: BaseDataType
@@ -52157,7 +52444,7 @@ Children:
               Type: BaseDataVariableType
               DataType: VariablePointer
               Description: {"NamespaceIndex":7,"TextId":"SetVariableToModifyDescription"}
-              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/CaseSelected"
+              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/CaseSelected"
             - Name: Value
               Type: BaseDataVariableType
               DataType: Int32
@@ -52194,7 +52481,7 @@ Children:
             - Name: VariableToModify
               Type: BaseDataVariableType
               DataType: VariablePointer
-              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/XHold"
+              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/XHold"
             - Name: Value
               Type: BaseDataVariableType
               DataType: Float
@@ -52207,7 +52494,7 @@ Children:
                   DataType: String
                   ReferenceType: HasParameter
                   ModellingRule: Optional
-                  Value: "{0}/13.02083333333333"
+                  Value: "{0}/{1}"
                 - Name: ns=7;Source0
                   Type: BaseDataVariableType
                   DataType: BaseDataType
@@ -52225,7 +52512,7 @@ Children:
                         DataType: LocalizedText
                         ReferenceType: HasParameter
                         ModellingRule: Optional
-                        Value: {"LocaleId":"","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/TopMargin[{0}]"}
+                        Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/TopMargin[{0}]"}
                       - Name: ns=7;Source0
                         Type: BaseDataVariableType
                         DataType: BaseDataType
@@ -52234,7 +52521,16 @@ Children:
                         - Name: DynamicLink
                           Type: DynamicLink
                           DataType: NodePath
-                          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/CaseSelected"
+                          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/CaseSelected"
+                - Name: ns=7;Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/PixelScaling"
             - Name: ArrayIndex
               Type: BaseDataVariableType
               DataType: UInt32
@@ -52261,7 +52557,7 @@ Children:
             - Name: VariableToModify
               Type: BaseDataVariableType
               DataType: VariablePointer
-              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/YHold"
+              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/YHold"
             - Name: Value
               Type: BaseDataVariableType
               DataType: Float
@@ -52274,7 +52570,7 @@ Children:
                   DataType: String
                   ReferenceType: HasParameter
                   ModellingRule: Optional
-                  Value: "{0}/13.02083333333333"
+                  Value: "{0}/{1}"
                 - Name: ns=7;Source0
                   Type: BaseDataVariableType
                   DataType: BaseDataType
@@ -52292,7 +52588,7 @@ Children:
                         DataType: LocalizedText
                         ReferenceType: HasParameter
                         ModellingRule: Optional
-                        Value: {"LocaleId":"","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/LeftMargin[{0}]"}
+                        Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/LeftMargin[{0}]"}
                       - Name: ns=7;Source0
                         Type: BaseDataVariableType
                         DataType: BaseDataType
@@ -52301,7 +52597,16 @@ Children:
                         - Name: DynamicLink
                           Type: DynamicLink
                           DataType: NodePath
-                          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/CaseSelected"
+                          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/CaseSelected"
+                - Name: ns=7;Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/PixelScaling"
             - Name: ArrayIndex
               Type: BaseDataVariableType
               DataType: UInt32
@@ -52372,7 +52677,1486 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPattern/CaseSelected"
+                Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/CaseSelected"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: Color
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "#0fafff"
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: Color
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+  - Name: FillColor
+    Type: BaseDataVariableType
+    DataType: Color
+    ModellingRule: Optional
+  - Name: CornerRadius
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 5.0
+- Name: FBaseBox
+  Id: g=8de0adf2cacdbc9515ae97e4a6180572
+  Supertype: Rectangle
+  Description: {"NamespaceIndex":36,"TextId":"Description"}
+  ReferenceType: HasComponent
+  Children:
+  - Name: CornerRadius
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+  - Name: HorizontalAlignment
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+  - Name: VerticalAlignment
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    Value: 208.0
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/WidthArray[{0}]"}
+        - Name: ns=7;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+  - Name: LeftMargin
+    Type: BaseVariableType
+    DataType: Size
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/LeftMargin[{0}]"}
+        - Name: ns=7;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: TopMargin
+    Type: BaseVariableType
+    DataType: Size
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/TopMargin[{0}]"}
+        - Name: ns=7;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: RightMargin
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+  - Name: BottomMargin
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    Value: 104.0
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/HeightArray[{0}]"}
+        - Name: ns=7;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+  - Name: BoxTitle
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":""}
+  - Name: FillColor
+    Type: BaseDataVariableType
+    DataType: Color
+    Value: "#b0916e"
+    Children:
+    - Name: ConditionalConverter1
+      Type: ConditionalConverter
+      Children:
+      - Name: Condition
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ReferenceType: HasSource
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{0}=={1}"
+          - Name: ns=7;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Index"
+          - Name: ns=7;Source1
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/CaseSelected"
+      - Name: TrueValue
+        Type: BaseDataVariableType
+        DataType: Color
+        ReferenceType: HasParameter
+        ModellingRule: Optional
+        Value: "#0fafff"
+      - Name: FalseValue
+        Type: BaseDataVariableType
+        DataType: Color
+        ReferenceType: HasParameter
+        ModellingRule: Optional
+        Value: "#b0916e"
+  - Name: BorderThickness
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 3.0
+  - Name: Index
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Visible
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+    Children:
+    - Name: ExpressionEvaluator2
+      Type: ExpressionEvaluator
+      Children:
+      - Name: Expression
+        Type: BaseDataVariableType
+        DataType: String
+        ReferenceType: HasParameter
+        ModellingRule: Optional
+        Value: "{0}>={1}"
+      - Name: ns=7;Source0
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/NumCasesCustom"
+      - Name: ns=7;Source1
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Index"
+  - Name: BorderColor
+    Type: BaseDataVariableType
+    DataType: Color
+    ModellingRule: Optional
+    Value: "#000000"
+  - Name: Label1
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../Index"
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 25.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+    - Name: TextColor
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#000000"
+  - Name: MoveTarget
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "..@NodeId"
+  - Name: HitTestVisible
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: MouseDownEventHandler1
+    Type: EventHandler
+    Children:
+    - Name: ListenEventType
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseDownEvent"
+    - Name: MethodsToCall
+      Type: BaseObjectType
+      Children:
+      - Name: MethodContainer1
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Description: {"NamespaceIndex":7,"TextId":"SetVariableToModifyDescription"}
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/CaseSelected"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Int32
+            Description: {"NamespaceIndex":7,"TextId":"SetValueDescription"}
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Index"
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Description: {"NamespaceIndex":7,"TextId":"SetArrayIndexDescription"}
+            ValueRank: ScalarOrOneDimension
+    - Name: EventArguments
+      Type: MouseDownEvent
+      Children:
+      - Name: EventId
+        Type: PropertyType
+        DataType: ByteString
+      - Name: EventType
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceNode
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceName
+        Type: PropertyType
+        DataType: String
+      - Name: Time
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: ReceiveTime
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: Message
+        Type: PropertyType
+        DataType: LocalizedText
+      - Name: Severity
+        Type: PropertyType
+        DataType: UInt16
+  - Name: Opacity
+    Type: BaseVariableType
+    DataType: Float
+    ModellingRule: Optional
+    Value: 90.0
+  - Name: MouseUpEventHandler1
+    Type: EventHandler
+    Children:
+    - Name: ListenEventType
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseUpEvent"
+    - Name: MethodsToCall
+      Type: BaseObjectType
+      Children:
+      - Name: MethodContainer2
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/XHold"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Float
+            Children:
+            - Name: ExpressionEvaluator1
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Expression
+                Type: BaseDataVariableType
+                DataType: String
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: "{0}/{1}"
+              - Name: ns=7;Source0
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Children:
+                  - Name: DynamicLinkFormatter
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      ModellingRule: Optional
+                      Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/TopMargin[{0}]"}
+                    - Name: ns=7;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/CaseSelected"
+              - Name: ns=7;Source1
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/PixelScaling"
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: ScalarOrOneDimension
+      - Name: MethodContainer1
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/YHold"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Float
+            Children:
+            - Name: ExpressionEvaluator1
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Expression
+                Type: BaseDataVariableType
+                DataType: String
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: "{0}/{1}"
+              - Name: ns=7;Source0
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Children:
+                  - Name: DynamicLinkFormatter
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      ModellingRule: Optional
+                      Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/LeftMargin[{0}]"}
+                    - Name: ns=7;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/CaseSelected"
+              - Name: ns=7;Source1
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/PixelScaling"
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: ScalarOrOneDimension
+      - Name: MethodContainer3
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/TopMargin"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Size
+            Children:
+            - Name: ExpressionEvaluator1
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Expression
+                Type: BaseDataVariableType
+                DataType: String
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: "{0}*{1}"
+              - Name: ns=7;Source0
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/XHold"
+              - Name: ns=7;Source1
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/PixelScaling"
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: ScalarOrOneDimension
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/CaseSelected"
+      - Name: MethodContainer4
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/LeftMargin"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Size
+            Children:
+            - Name: ExpressionEvaluator1
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Expression
+                Type: BaseDataVariableType
+                DataType: String
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: "{0}*{1}"
+              - Name: ns=7;Source0
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/YHold"
+              - Name: ns=7;Source1
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/PixelScaling"
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: ScalarOrOneDimension
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/CaseSelected"
+      - Name: MethodContainer5
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Description: {"NamespaceIndex":7,"TextId":"SetVariableToModifyDescription"}
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/RunSnap"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Description: {"NamespaceIndex":7,"TextId":"SetValueDescription"}
+            Value: true
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Description: {"NamespaceIndex":7,"TextId":"SetArrayIndexDescription"}
+            ValueRank: ScalarOrOneDimension
+    - Name: EventArguments
+      Type: MouseUpEvent
+      Children:
+      - Name: EventId
+        Type: PropertyType
+        DataType: ByteString
+      - Name: EventType
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceNode
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceName
+        Type: PropertyType
+        DataType: String
+      - Name: Time
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: ReceiveTime
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: Message
+        Type: PropertyType
+        DataType: LocalizedText
+      - Name: Severity
+        Type: PropertyType
+        DataType: UInt16
+- Name: FCaseLocations
+  Id: g=7a1cdd78de40c8d5b29e1406c58af3a1
+  Supertype: Rectangle
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 200.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 50.0
+  - Name: Index1
+    Type: RowLayout
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 200.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: ContentAlignment
+      Type: BaseVariableType
+      DataType: ContentHorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: RightMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: IndexLabel
+      Type: Rectangle
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 65.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 65.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: Label2
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: -1.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: -1.0
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: FontSize
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 18.0
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+    - Name: LeftContainer
+      Type: Rectangle
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 65.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 65.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: SpinBox1
+        Type: SpinBox
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Double
+          Children:
+          - Name: ExpressionEvaluator1
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "{0}/{1}"
+            - Name: ns=7;Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Children:
+                - Name: DynamicLinkFormatter
+                  Type: StringFormatter
+                  Children:
+                  - Name: Format
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/TopMargin[{0}]"}
+                  - Name: ns=7;Source0
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../../../../../Index"
+            - Name: ns=7;Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/PixelScaling"
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 70.0
+        - Name: ShowButtons
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+        - Name: Editable
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "n3"
+        - Name: FontSize
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 18.0
+        - Name: InputBoxStyle
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "Edit Box"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+    - Name: RightContainer
+      Type: Rectangle
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 65.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 65.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: SpinBox1
+        Type: SpinBox
+        Children:
+        - Name: Value
+          Type: BaseDataVariableType
+          DataType: Double
+          Children:
+          - Name: ExpressionEvaluator1
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "{0}/{1}"
+            - Name: ns=7;Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Children:
+                - Name: DynamicLinkFormatter
+                  Type: StringFormatter
+                  Children:
+                  - Name: Format
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/LeftMargin[{0}]"}
+                  - Name: ns=7;Source0
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../../../../../Index"
+            - Name: ns=7;Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/PixelScaling"
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 70.0
+        - Name: ShowButtons
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+        - Name: Editable
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "n3"
+        - Name: FontSize
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 18.0
+        - Name: InputBoxStyle
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "Edit Box"
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+  - Name: BorderColor
+    Type: BaseDataVariableType
+    DataType: Color
+    Value: "#000000"
+  - Name: Index
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Visible
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+    Children:
+    - Name: ExpressionEvaluator1
+      Type: ExpressionEvaluator
+      Children:
+      - Name: Expression
+        Type: BaseDataVariableType
+        DataType: String
+        ReferenceType: HasParameter
+        ModellingRule: Optional
+        Value: "{0}>={1}"
+      - Name: ns=7;Source0
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/NumCasesCustom"
+      - Name: ns=7;Source1
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../Index"
+  - Name: BorderThickness
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1.0
+  - Name: HitTestVisible
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+  - Name: HorizontalAlignment
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 2
+  - Name: VerticalAlignment
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 2
+  - Name: Highlight
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 200.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: FillColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+    - Name: HitTestVisible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+    - Name: BorderThickness
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 3.0
+    - Name: MouseDownEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseDownEvent"
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=7;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/Commands/VariableCommands"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: ns=7;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Set"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: VariableToModify
+              Type: BaseDataVariableType
+              DataType: VariablePointer
+              Description: {"NamespaceIndex":7,"TextId":"SetVariableToModifyDescription"}
+              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/CaseSelected"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Int32
+              Description: {"NamespaceIndex":7,"TextId":"SetValueDescription"}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Index"
+            - Name: ArrayIndex
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Description: {"NamespaceIndex":7,"TextId":"SetArrayIndexDescription"}
+              ValueRank: ScalarOrOneDimension
+        - Name: MethodContainer2
+          Type: BaseObjectType
+          Children:
+          - Name: ns=7;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/Commands/VariableCommands"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: ns=7;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Set"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: VariableToModify
+              Type: BaseDataVariableType
+              DataType: VariablePointer
+              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/XHold"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Float
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Expression
+                  Type: BaseDataVariableType
+                  DataType: String
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: "{0}/{1}"
+                - Name: ns=7;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Children:
+                    - Name: DynamicLinkFormatter
+                      Type: StringFormatter
+                      Children:
+                      - Name: Format
+                        Type: BaseDataVariableType
+                        DataType: LocalizedText
+                        ReferenceType: HasParameter
+                        ModellingRule: Optional
+                        Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/TopMargin[{0}]"}
+                      - Name: ns=7;Source0
+                        Type: BaseDataVariableType
+                        DataType: BaseDataType
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/CaseSelected"
+                - Name: ns=7;Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/PixelScaling"
+            - Name: ArrayIndex
+              Type: BaseDataVariableType
+              DataType: UInt32
+              ValueRank: ScalarOrOneDimension
+        - Name: MethodContainer3
+          Type: BaseObjectType
+          Children:
+          - Name: ns=7;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/Commands/VariableCommands"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: ns=7;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Set"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: VariableToModify
+              Type: BaseDataVariableType
+              DataType: VariablePointer
+              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/YHold"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Float
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Expression
+                  Type: BaseDataVariableType
+                  DataType: String
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: "{0}/{1}"
+                - Name: ns=7;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Children:
+                    - Name: DynamicLinkFormatter
+                      Type: StringFormatter
+                      Children:
+                      - Name: Format
+                        Type: BaseDataVariableType
+                        DataType: LocalizedText
+                        ReferenceType: HasParameter
+                        ModellingRule: Optional
+                        Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/LeftMargin[{0}]"}
+                      - Name: ns=7;Source0
+                        Type: BaseDataVariableType
+                        DataType: BaseDataType
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/CaseSelected"
+                - Name: ns=7;Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/PixelScaling"
+            - Name: ArrayIndex
+              Type: BaseDataVariableType
+              DataType: UInt32
+              ValueRank: ScalarOrOneDimension
+      - Name: EventArguments
+        Type: MouseDownEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+    - Name: BorderColor
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#0fafff"
+      Children:
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "{0}=={1}"
+            - Name: ns=7;Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Index"
+            - Name: ns=7;Source1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/CaseSelected"
         - Name: TrueValue
           Type: BaseDataVariableType
           DataType: Color

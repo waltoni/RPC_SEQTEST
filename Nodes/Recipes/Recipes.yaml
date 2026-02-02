@@ -354,6 +354,10 @@ Children:
     - Name: LabelOrient
       Type: BaseDataVariableType
       DataType: Int32
+  - Name: Timeout
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:00:00:01.0000000"
 - Name: RPCSchemaSeq
   Id: g=82ec411bc290d2415b3b380d952cb6dd
   Type: RecipeSchema
@@ -531,6 +535,10 @@ Children:
       DataType: Int16
       ValueRank: OneDimension
       ArrayDimensions: [64]
+  - Name: Timeout
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:00:00:01.0000000"
 - Name: RPCSchemaSeqF
   Id: g=297806fb62b9904e663b9eb6eede35af
   Type: RecipeSchema
@@ -705,3 +713,7 @@ Children:
       DataType: Int16
       ValueRank: OneDimension
       ArrayDimensions: [64]
+  - Name: Timeout
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:00:00:01.0000000"
