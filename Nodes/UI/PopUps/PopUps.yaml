@@ -1438,7 +1438,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 10.0
+        Value: 15.0
       - Name: Add_Sub_Layout
         Type: RowLayout
         Children:
@@ -1946,6 +1946,23 @@ Children:
           DataType: String
           ModellingRule: Optional
           Value: "n2"
+        - Name: MinValue
+          Type: BaseDataVariableType
+          DataType: Double
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/XLimitNeg"
+        - Name: MaxValue
+          Type: BaseDataVariableType
+          DataType: Double
+          Value: 100.0
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/XLimitPos"
       - Name: Label2
         Type: Label
         Children:
@@ -2106,6 +2123,23 @@ Children:
           DataType: String
           ModellingRule: Optional
           Value: "n2"
+        - Name: MinValue
+          Type: BaseDataVariableType
+          DataType: Double
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/YLimitNeg"
+        - Name: MaxValue
+          Type: BaseDataVariableType
+          DataType: Double
+          Value: 100.0
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/YLimitPos"
       - Name: Filler
         Type: Label
         Children:
@@ -4429,6 +4463,23 @@ Children:
           DataType: String
           ModellingRule: Optional
           Value: "n2"
+        - Name: MinValue
+          Type: BaseDataVariableType
+          DataType: Double
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/XLimitNeg"
+        - Name: MaxValue
+          Type: BaseDataVariableType
+          DataType: Double
+          Value: 100.0
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/XLimitPos"
       - Name: Label2
         Type: Label
         Children:
@@ -4589,6 +4640,23 @@ Children:
           DataType: String
           ModellingRule: Optional
           Value: "n2"
+        - Name: MinValue
+          Type: BaseDataVariableType
+          DataType: Double
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/YLimitNeg"
+        - Name: MaxValue
+          Type: BaseDataVariableType
+          DataType: Double
+          Value: 100.0
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/YLimitPos"
       - Name: Filler
         Type: Label
         Children:

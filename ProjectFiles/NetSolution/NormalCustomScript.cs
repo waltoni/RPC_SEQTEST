@@ -225,13 +225,16 @@ public class NormalCustomScript : BaseNetLogic
     {
         Log.Info(nameof(NormalCustomScript), "Snap() called");
 
+        // Boundary check runs first on every drop (priority over snap)
+        ApplyBoundaryCheck();
+
         if (!GetSnapMode())
         {
             Log.Info(nameof(NormalCustomScript), "Snap: SnapMode off, returning");
             return;
         }
 
-        var cp = Project.Current?.Get($"{CustomPatternPath}");
+        var cp = Project.Current?.Get(CustomPatternPath);
         if (cp == null)
         {
             Log.Warning(nameof(NormalCustomScript), "Snap: CustomPattern not found");
@@ -307,6 +310,69 @@ public class NormalCustomScript : BaseNetLogic
         }
 
         Log.Info(nameof(NormalCustomScript), $"Snap: applied for case {i} -> ({bestLeft:F1}, {bestTop:F1})");
+
+        // Boundary check again after snap (snap position may be outside bounds)
+        ApplyBoundaryCheck();
+    }
+
+    private void ApplyBoundaryCheck()
+    {
+        var cp = Project.Current?.Get(CustomPatternPath);
+        if (cp == null) return;
+
+        int i = GetCaseSelected();
+        int numCases = GetCurrentCount();
+        if (i < 1 || i > numCases) return;
+
+        var xLimitNegVar = cp.GetVariable("XLimitNeg");
+        var xLimitPosVar = cp.GetVariable("XLimitPos");
+        var yLimitNegVar = cp.GetVariable("YLimitNeg");
+        var yLimitPosVar = cp.GetVariable("YLimitPos");
+        if (xLimitNegVar == null || xLimitPosVar == null || yLimitNegVar == null || yLimitPosVar == null)
+            return;
+
+        var pxVar = cp.GetVariable("PixelScaling");
+        float pxPerInch = pxVar != null ? ToFloat(pxVar.Value) : 12f;
+        if (pxPerInch <= 0) return;
+
+        // Limits are in inches; TopMargin/LeftMargin are in pixels - convert limits to pixels
+        float xLimitNeg = ToFloat(xLimitNegVar.Value) * pxPerInch;
+        float xLimitPos = ToFloat(xLimitPosVar.Value) * pxPerInch;
+        float yLimitNeg = ToFloat(yLimitNegVar.Value) * pxPerInch;
+        float yLimitPos = ToFloat(yLimitPosVar.Value) * pxPerInch;
+
+        float currLeft = GetArrayFloat(cp.GetVariable("LeftMargin"), i);
+        float currTop = GetArrayFloat(cp.GetVariable("TopMargin"), i);
+        float myW = GetArrayFloat(cp.GetVariable("WidthArray"), i);
+        float myH = GetArrayFloat(cp.GetVariable("HeightArray"), i);
+        bool myRot = GetArrayBool(cp.GetVariable("Rot90"), i);
+        float extW = myRot ? myH : myW;
+        float extH = myRot ? myW : myH;
+
+        // X = TopMargin (vertical), Y = LeftMargin (horizontal)
+        // Limits are pre-calculated; use directly (no subtraction)
+        float leftMin = yLimitNeg;
+        float leftMax = yLimitPos;
+        float topMin = xLimitNeg;
+        float topMax = xLimitPos;
+
+        float clampedLeft = Math.Max(leftMin, Math.Min(leftMax, currLeft));
+        float clampedTop = Math.Max(topMin, Math.Min(topMax, currTop));
+
+        if (Math.Abs(clampedLeft - currLeft) > 0.001f || Math.Abs(clampedTop - currTop) > 0.001f)
+        {
+            SetArrayElement(cp.GetVariable("LeftMargin"), i, clampedLeft);
+            SetArrayElement(cp.GetVariable("TopMargin"), i, clampedTop);
+
+            if (pxPerInch > 0)
+            {
+                var xHoldVar = cp.GetVariable("XHold");
+                var yHoldVar = cp.GetVariable("YHold");
+                if (xHoldVar != null) xHoldVar.Value = clampedTop / pxPerInch;
+                if (yHoldVar != null) yHoldVar.Value = clampedLeft / pxPerInch;
+            }
+            Log.Info(nameof(NormalCustomScript), $"BoundaryCheck: case {i} clamped from ({currLeft:F0},{currTop:F0}) to ({clampedLeft:F0},{clampedTop:F0}) | limits px: left[{leftMin:F0},{leftMax:F0}] top[{topMin:F0},{topMax:F0}] extW={extW:F0} extH={extH:F0}");
+        }
     }
 
     private bool GetSnapMode()
