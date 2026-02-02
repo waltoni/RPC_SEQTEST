@@ -44596,6 +44596,7 @@ Children:
       DataType: String
       Value: "RecipeEdit.RecipeHoldName"
   - Name: PatType
+    Id: g=ddeb57f27de6d54e9a30edd2672e6e8e
     Type: RAEtherNetIPTag
     DataType: Int16
     Children:
@@ -44644,6 +44645,7 @@ Children:
       DataType: String
       Value: "RecipeEdit.numPerLyr"
   - Name: FlipType
+    Id: g=3fe4d7393bc21ea0db4023d9283d0b5f
     Type: RAEtherNetIPTag
     DataType: Int16
     Children:
