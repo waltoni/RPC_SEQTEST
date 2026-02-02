@@ -1,0 +1,18 @@
+Name: Templates
+Type: FolderType
+Children:
+- File: RecipeEditPanels/RecipeEditPanels.yaml
+- File: StartupConf/StartupConf.yaml
+- File: Menus/Menus.yaml
+- File: MachineOptions/MachineOptions.yaml
+- File: Screens/Screens.yaml
+- File: Alarm/Alarm.yaml
+- File: Messages/Messages.yaml
+- File: Message_Icons/Message_Icons.yaml
+- File: Admin/Admin.yaml
+- File: SOL/SOL.yaml
+- File: Sensors/Sensors.yaml
+- File: Global_Templates/Global_Templates.yaml
+- File: Other/Other.yaml
+- File: Recipe_Select/Recipe_Select.yaml
+- File: CP_Map_Icons/CP_Map_Icons.yaml

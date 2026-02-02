@@ -1,0 +1,9 @@
+Name: Screens
+Type: FolderType
+Children:
+- File: RecipeEdit/RecipeEdit.yaml
+- File: ChangeOver/ChangeOver.yaml
+- File: IO/IO.yaml
+- File: InformationModals/InformationModals.yaml
+- File: Glue_Setup/Glue_Setup.yaml
+- File: ChangeOverMaps/ChangeOverMaps.yaml

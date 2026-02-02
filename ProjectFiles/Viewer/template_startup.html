@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>3D Viewer</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- Preload all GLB files for instant switching (files are small ~30KB each) -->
+    <link rel="preload" as="fetch" href="pallet_layout_A.glb" crossorigin="anonymous"/>
+    <link rel="preload" as="fetch" href="pallet_layout_B.glb" crossorigin="anonymous"/>
+    <link rel="preload" as="fetch" href="pallet_layout_A2.glb" crossorigin="anonymous"/>
+    <link rel="preload" as="fetch" href="pallet_layout_B2.glb" crossorigin="anonymous"/>
+    <script type="module" src="./3dViewerApi.js"></script>
+
+    <style>
+  html, body {
+            background-color: #e4e4e4;   /* ← your requested color */
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+       .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 0px;
+}
+
+model-viewer {
+    width: 333px;  /* 260 * 1.28 for 1024x768 scaling */
+    height: 448px;  /* 350 * 1.28 for 1024x768 scaling */
+    margin: 0;  /* remove auto margin */
+    will-change: transform;  /* GPU hint for smoother rotation */
+    transform: translateZ(0);  /* Force hardware acceleration */
+    backface-visibility: hidden;  /* Optimize rendering */
+    image-rendering: optimizeSpeed;  /* Prioritize performance */
+    -webkit-transform: translateZ(0);  /* Webkit hardware acceleration */
+    -moz-transform: translateZ(0);  /* Firefox hardware acceleration */
+    touch-action: pan-y pinch-zoom;  /* Limit touch interactions */
+    user-select: none;  /* Prevent text selection during drag */
+}
+
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <div>
+      <model-viewer
+	  power-preference="high-performance"
+	  render-scale="1.0"
+	  minimum-render-scale="1.0"
+    id="pickMaterial"
+    src="$File.glb"
+    preload
+    reveal="auto"
+    loading="eager"
+    camera-controls
+	interaction-prompt="none"
+	disable-tap
+	camera-target="auto"
+    camera-orbit="-90deg 65deg auto"
+    field-of-view="25deg"
+    shadow-intensity="0"
+    disable-zoom
+    disable-pan
+    auto-rotate-delay="0"
+    exposure="1.0"
+    tone-mapping="auto"
+    min-camera-orbit="auto 30deg auto"
+    max-camera-orbit="auto 90deg auto"
+    interaction-policy="allow-when-focused"
+    camera-controls-max-distance="auto"
+    camera-controls-min-distance="auto"
+    camera-controls-touch-action="none">
+</model-viewer>
+
+
+        <script type="module" src="./ChangeColor.js"></script>
+    </div>
+</div>
+</body>
+</html>

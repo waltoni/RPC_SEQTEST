@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Adjustable 3D Rectangular Prism</title>
+<style>
+  :root{
+    --bg: #0f172a;
+    --panel: #0b1220cc;
+    --face-edge: rgba(255,255,255,0.06);
+  }
+
+  html,body{
+    height:100%;
+    margin:0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg,var(--bg), #071023 80%);
+    color:#e6eef8;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  .app {
+    min-height:100%;
+    display:flex;
+    gap:24px;
+    padding:28px;
+    box-sizing:border-box;
+    align-items:flex-start;
+    justify-content:center;
+  }
+
+  /* Controls panel */
+  .controls {
+    width:320px;
+    background:var(--panel);
+    border-radius:12px;
+    padding:16px;
+    box-shadow: 0 6px 24px rgba(2,6,23,0.6);
+    backdrop-filter: blur(6px);
+  }
+  .controls h2{ margin:0 0 12px 0; font-size:16px }
+  .row { display:flex; gap:8px; align-items:center; margin:10px 0; }
+  label{ flex:0 0 80px; font-size:13px; color:#cfe0ffcc; }
+  input[type="range"] { flex:1; }
+  input[type="number"]{ width:86px; padding:6px 8px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:transparent; color:inherit; }
+
+  .scene-wrap {
+    width:640px;
+    height:520px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  /* 3D stage */
+  .stage {
+    width:420px;
+    height:360px;
+    perspective: 1200px; /* controlled by JS */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .cr-center {
+    width:0;height:0;
+    transform-style: preserve-3d;
+    transition: transform 260ms cubic-bezier(.2,.9,.25,1);
+    will-change: transform;
+    position:relative;
+  }
+
+  /* Prism container (so we can rotate the whole prism) */
+  .prism {
+    position:relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  .face {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    backface-visibility: hidden;
+    display:block;
+    border: 1px solid var(--face-edge);
+    box-sizing: border-box;
+    border-radius:6px;
+    overflow:hidden;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    box-shadow: 0 6px 18px rgba(2,6,23,0.4) inset;
+  }
+
+  /* subtle edge highlight */
+  .face::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    background: linear-gradient(90deg, rgba(255,255,255,0.03), transparent 35%);
+    pointer-events:none;
+  }
+
+  /* label showing current dims */
+  .meta {
+    margin-top:12px;
+    font-size:13px;
+    color:#9fbaf2;
+  }
+
+  footer { position: absolute; bottom:12px; left:12px; font-size:12px; color:#8fa8d8cc; }
+  .controls .group-title { font-size:12px; color:#9fbff9; margin-top:8px; margin-bottom:4px; }
+
+  /* small helpers */
+  .flex-between { display:flex; justify-content:space-between; align-items:center; gap:8px; }
+</style>
+</head>
+<body>
+  <div class="app">
+    <div class="controls" aria-label="controls">
+      <h2>Rectangular prism — adjustable</h2>
+
+      <div class="group-title">Dimensions (px)</div>
+      <div class="row">
+        <label for="widthRange">Width</label>
+        <input id="widthRange" type="range" min="40" max="600" step="1" value="220">
+        <input id="widthNumber" type="number" min="40" max="600" value="220">
+      </div>
+
+      <div class="row">
+        <label for="heightRange">Height</label>
+        <input id="heightRange" type="range" min="20" max="600" step="1" value="140">
+        <input id="heightNumber" type="number" min="20" max="600" value="140">
+      </div>
+
+      <div class="row">
+        <label for="depthRange">Depth</label>
+        <input id="depthRange" type="range" min="20" max="600" step="1" value="160">
+        <input id="depthNumber" type="number" min="20" max="600" value="160">
+      </div>
+
+      <div class="group-title">View</div>
+      <div class="row">
+        <label for="rotY">Rotate Y</label>
+        <input id="rotY" type="range" min="-180" max="180" value="-22">
+        <input id="rotYNum" type="number" min="-180" max="180" value="-22">
+      </div>
+
+      <div class="row">
+        <label for="rotX">Rotate X</label>
+        <input id="rotX" type="range" min="-80" max="80" value="-12">
+        <input id="rotXNum" type="number" min="-80" max="80" value="-12">
+      </div>
+
+      <div class="row">
+        <label for="perspective">Perspective</label>
+        <input id="perspective" type="range" min="400" max="2400" step="10" value="1100">
+        <input id="perspectiveNum" type="number" min="400" max="2400" value="1100">
+      </div>
+
+      <div class="group-title">Extras</div>
+      <div class="row">
+        <label for="showGuides">Shaded edges</label>
+        <input id="showGuides" type="checkbox" checked />
+      </div>
+
+      <div class="meta" id="metaText">Width: 220px • Height: 140px • Depth: 160px</div>
+    </div>
+
+    <div class="scene-wrap">
+      <div class="stage" id="stage">
+        <div class="cr-center" id="crCenter">
+          <div class="prism" id="prism">
+            <div class="face" id="front" aria-hidden="false"><!-- front --></div>
+            <div class="face" id="back" aria-hidden="true"><!-- back --></div>
+            <div class="face" id="right" aria-hidden="true"><!-- right --></div>
+            <div class="face" id="left" aria-hidden="true"><!-- left --></div>
+            <div class="face" id="top" aria-hidden="true"><!-- top --></div>
+            <div class="face" id="bottom" aria-hidden="true"><!-- bottom --></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>Tip: drag sliders or type numbers. Faces are recalculated so edges stay joined.</footer>
+
+<script>
+/*
+  Key idea to keep faces connected:
+  - Compute half sizes (halfW, halfH, halfD)
+  - Set each face's CSS width/height (faces have different pre-rotation width/height)
+  - Place faces by transform: (order: rotations first, translateZ second where needed)
+    front:  translateZ( halfD )
+    back:   rotateY(180deg) translateZ( halfD )
+    right:  rotateY(90deg)  translateZ( halfW )
+    left:   rotateY(-90deg) translateZ( halfW )
+    top:    rotateX(90deg)  translateZ( halfH )
+    bottom: rotateX(-90deg) translateZ( halfH )
+  - Using translateZ with half dimensions keeps faces exactly at the edges.
+*/
+
+const el = {
+  widthRange: document.getElementById('widthRange'),
+  widthNumber: document.getElementById('widthNumber'),
+  heightRange: document.getElementById('heightRange'),
+  heightNumber: document.getElementById('heightNumber'),
+  depthRange: document.getElementById('depthRange'),
+  depthNumber: document.getElementById('depthNumber'),
+  rotX: document.getElementById('rotX'),
+  rotXNum: document.getElementById('rotXNum'),
+  rotY: document.getElementById('rotY'),
+  rotYNum: document.getElementById('rotYNum'),
+  perspective: document.getElementById('perspective'),
+  perspectiveNum: document.getElementById('perspectiveNum'),
+  showGuides: document.getElementById('showGuides'),
+  metaText: document.getElementById('metaText'),
+  stage: document.getElementById('stage'),
+  crCenter: document.getElementById('crCenter'),
+  prism: document.getElementById('prism'),
+  faces: {
+    front: document.getElementById('front'),
+    back:  document.getElementById('back'),
+    right: document.getElementById('right'),
+    left:  document.getElementById('left'),
+    top:   document.getElementById('top'),
+    bottom:document.getElementById('bottom')
+  }
+};
+
+// keep ranged and number inputs in sync
+function bindRangeAndNumber(rangeEl, numEl, onChange) {
+  rangeEl.addEventListener('input', () => {
+    numEl.value = rangeEl.value;
+    onChange();
+  });
+  numEl.addEventListener('input', () => {
+    // clamp to min/max of range
+    const min = parseFloat(rangeEl.min || -Infinity);
+    const max = parseFloat(rangeEl.max || Infinity);
+    let v = parseFloat(numEl.value);
+    if (isNaN(v)) v = rangeEl.value;
+    v = Math.max(min, Math.min(max, v));
+    numEl.value = v;
+    rangeEl.value = v;
+    onChange();
+  });
+}
+
+bindRangeAndNumber(el.widthRange, el.widthNumber, update);
+bindRangeAndNumber(el.heightRange, el.heightNumber, update);
+bindRangeAndNumber(el.depthRange, el.depthNumber, update);
+bindRangeAndNumber(el.rotX, el.rotXNum, update);
+bindRangeAndNumber(el.rotY, el.rotYNum, update);
+bindRangeAndNumber(el.perspective, el.perspectiveNum, update);
+el.showGuides.addEventListener('change', () => {
+  update();
+});
+
+function px(n){ return n + 'px'; }
+
+function update(){
+  const W = +el.widthRange.value;
+  const H = +el.heightRange.value;
+  const D = +el.depthRange.value;
+  const halfW = W/2;
+  const halfH = H/2;
+  const halfD = D/2;
+
+  // update meta text
+  el.metaText.textContent = `Width: ${W}px • Height: ${H}px • Depth: ${D}px`;
+
+  // set perspective
+  el.stage.style.perspective = el.perspective.value + 'px';
+
+  // rotate entire prism (via crCenter) to view it
+  const rx = +el.rotX.value;
+  const ry = +el.rotY.value;
+  el.crCenter.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
+
+  // faces - set sizes and transforms
+  // FRONT
+  el.faces.front.style.width  = px(W);
+  el.faces.front.style.height = px(H);
+  el.faces.front.style.left   = '50%';
+  el.faces.front.style.top    = '50%';
+  el.faces.front.style.transform = `translate(-50%,-50%) translateZ(${halfD}px)`;
+
+  // BACK (flip it so its outward normal faces outward)
+  el.faces.back.style.width  = px(W);
+  el.faces.back.style.height = px(H);
+  el.faces.back.style.transform = `translate(-50%,-50%) rotateY(180deg) translateZ(${halfD}px)`;
+
+  // RIGHT (pre-rotation width is depth, height is H)
+  el.faces.right.style.width  = px(D);
+  el.faces.right.style.height = px(H);
+  el.faces.right.style.transform = `translate(-50%,-50%) rotateY(90deg) translateZ(${halfW}px)`;
+
+  // LEFT
+  el.faces.left.style.width  = px(D);
+  el.faces.left.style.height = px(H);
+  el.faces.left.style.transform = `translate(-50%,-50%) rotateY(-90deg) translateZ(${halfW}px)`;
+
+  // TOP (pre-rotation width is W, height is depth)
+  el.faces.top.style.width  = px(W);
+  el.faces.top.style.height = px(D);
+  el.faces.top.style.transform = `translate(-50%,-50%) rotateX(90deg) translateZ(${halfH}px)`;
+
+  // BOTTOM
+  el.faces.bottom.style.width  = px(W);
+  el.faces.bottom.style.height = px(D);
+  el.faces.bottom.style.transform = `translate(-50%,-50%) rotateX(-90deg) translateZ(${halfH}px)`;
+
+  // optional visual guides (subtle borders / shading)
+  const show = el.showGuides.checked;
+  const border = show ? '1px solid rgba(255,255,255,0.06)' : '1px solid transparent';
+  const afterOpacity = show ? 0.03 : 0;
+  for (let k in el.faces) {
+    el.faces[k].style.border = border;
+    el.faces[k].style.boxShadow = show ? '0 6px 18px rgba(2,6,23,0.4) inset' : 'none';
+    el.faces[k].style.setProperty('--after-opacity', afterOpacity);
+  }
+
+  // center the prism visually: since faces are absolute and centered via translate(-50%,-50%),
+  // prism element itself can remain at 0,0. optional: set transform-origin to center.
+  el.prism.style.width = px(W);
+  el.prism.style.height = px(H);
+}
+
+// initial update
+update();
+</script>
+</body>
+</html>

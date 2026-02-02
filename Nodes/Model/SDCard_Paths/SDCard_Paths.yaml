@@ -1,0 +1,41 @@
+Name: SDCard_Paths
+Type: FolderType
+Children:
+- Name: SDCardPathValidator
+  Id: g=0118fb0147e851ac379247798b782670
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: GrabUserPaths
+    Children:
+    - Name: ns=0;InputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"pdfsFolderPath","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Class: Method
+    Name: initializeSDCard
+  - Name: pathToValidate
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: isPathValid
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ErrorMessage
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: SDPath
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "%USB1%/"
+  - Name: SDInitialize
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=36;%PROJECTDIR%/SDInitialize/"
+- File: ObjectTemplate/ObjectTemplate.yaml
+- File: PDFs/PDFs.yaml
+- File: RecipeCSVs/RecipeCSVs.yaml
+- File: Reports/Reports.yaml

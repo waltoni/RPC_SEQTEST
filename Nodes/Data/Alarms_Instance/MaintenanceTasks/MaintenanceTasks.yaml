@@ -1,0 +1,380 @@
+Name: MaintenanceTasks
+Id: g=6ae32cebf729c86a7339395f709792cd
+Type: FolderType
+Children:
+- Name: Maint_1
+  Id: g=5ff93e58ae37af6bafea296d7974aa72
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=61806d023c82dc08055047510bb072c2
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=1306738be97d98979e320172964af0e5
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=9ad690130b17c959fbc87d7500fad0fe
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/_Maintenance/Alert[0].1"
+      Children:
+      - Name: Mode
+        Id: g=c0395cb15f6538ac39eff8aedc323df2
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=4679e3e782eaf33eeb32941cb43b1954
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=754f4829cd20a882cd68539e448e65a1
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Children:
+    - Name: DynamicLink
+      Id: g=792645d4c110117fd9ac8618b69aad5d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/_Maintenance/MaintAlertString[1]@Value"
+      Children:
+      - Name: IsPull
+        Id: g=136f3b772e18e85c267effc8235e9ca6
+        Type: BaseVariableType
+        DataType: Boolean
+        Value: true
+  - Name: AutoAcknowledge
+    Id: g=23a685c79615a861d9790a8118547847
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=9cf57187a953272cc0370b523a745240
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=b2cf329f95c0862e74e1afccb4211580
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 250
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: Maint_2
+  Id: g=6e2dfa622c1590151a6dcbeafb9ce956
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=9af0edf8170337c5b669978a9e5f9573
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=c1c5a47fc1d38901de258d77b9e8049b
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=5947014cd3a62c7786d4760bb34ffcd5
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/_Maintenance/Alert[0].2"
+      Children:
+      - Name: Mode
+        Id: g=0a2ff27624d2a4980356105a61cfe77d
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=c24fb43abb70b5d71fcd5d655112327d
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=a320595c7e2d0399da96eb5bf9c0fa6c
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Children:
+    - Name: DynamicLink
+      Id: g=0ab3acaaa5f11454e27808b1eafe563b
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/_Maintenance/MaintAlertString[2]@Value"
+      Children:
+      - Name: IsPull
+        Id: g=9053fa236e6adb8e876d3c083bc5eb7b
+        Type: BaseVariableType
+        DataType: Boolean
+        Value: true
+  - Name: AutoAcknowledge
+    Id: g=a77a48af46c3ecbfcf2754862904a619
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=3bf9eba166de2a87243db35535fd27e5
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=f0772d812c179fc475b5948ebd135717
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 250
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: Maint_3
+  Id: g=8b857696f3effa4c736da27307c6f72c
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=ad19fff5c275a49765d337d756f93a58
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=205cd6f0c40ea249bfc70237322f09d1
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=2fb44def4b1fa3e7baa386b3fd203d68
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/_Maintenance/Alert[0].3"
+      Children:
+      - Name: Mode
+        Id: g=5e0e89ae13c73f3af80aac887a47a674
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=a6e324c852ed1428ca8238cad4f140ec
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=1d33b1be3878832d0941abf1e529adfd
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Children:
+    - Name: DynamicLink
+      Id: g=2c26f5e3721c2ac94f8032893b663cc3
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/_Maintenance/MaintAlertString[3]@Value"
+      Children:
+      - Name: IsPull
+        Id: g=57250bcd828348a18ad55e8a30284217
+        Type: BaseVariableType
+        DataType: Boolean
+        Value: true
+  - Name: AutoAcknowledge
+    Id: g=05a081b5f4a1ce395f9ca30265dc8866
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=be74ba3d9c775f0fbff169b507d5d703
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=e1198b559b78b7978593167aa05fa001
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 250
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: Maint_4
+  Id: g=41ad600cf32c4f3649b8befee5de2166
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=be4427bfcef9710e5ed8d8ea03b80137
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=0646eeb154d1e1b05feed2177a206118
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=9649ef139139e7693a1077a4c7b3adcd
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/_Maintenance/Alert[0].4"
+      Children:
+      - Name: Mode
+        Id: g=87017291cf1a00cd1231621988caba69
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=a1dabc08cc4b8600aa1eef19db192bff
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=71aa54771cf1f1200138501841914154
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Children:
+    - Name: DynamicLink
+      Id: g=098fd470348d0ac2e5a759ce5446790b
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/_Maintenance/MaintAlertString[4]@Value"
+      Children:
+      - Name: IsPull
+        Id: g=e8ba90a6fd441937a760b56f93a243a6
+        Type: BaseVariableType
+        DataType: Boolean
+        Value: true
+  - Name: AutoAcknowledge
+    Id: g=60530ab51773d2111df75b3b3aadbd40
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=7cffbfe823b67c2151804af613372622
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=3a38ad8372049ca4b3570fd45426021e
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 250
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward

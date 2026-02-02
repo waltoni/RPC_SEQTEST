@@ -1,0 +1,17 @@
+Name: ObjectTemplate
+Type: FolderType
+Children:
+- Name: SDPathBaseObject
+  Id: g=e898a557d5163b9d7ccf2279492e3eed
+  Supertype: BaseObjectType
+  Children:
+  - Name: Path
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+  - Name: IsPathValid
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ErrorMessage
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"

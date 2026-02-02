@@ -1,0 +1,45 @@
+Name: Import
+Type: FolderType
+Children:
+- Name: BasicImport
+  Type: SDPathBaseObject
+  Children:
+  - Name: Path
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "%USB1%/Recipes/Import/BasicImport.csv"
+  - Name: IsPathValid
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ErrorMessage
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+- Name: SeqImport
+  Type: SDPathBaseObject
+  Children:
+  - Name: Path
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "%USB1%/Recipes/Import/SeqImport.csv"
+  - Name: IsPathValid
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ErrorMessage
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+- Name: SeqFImport
+  Type: SDPathBaseObject
+  Children:
+  - Name: Path
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "%USB1%/Recipes/Import/SeqFImport.csv"
+  - Name: IsPathValid
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ErrorMessage
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"

@@ -1,0 +1,9 @@
+Name: Data
+Type: FolderType
+Children:
+- File: Alarms_Instance/Alarms_Instance.yaml
+- File: Messages_Instance/Messages_Instance.yaml
+- File: Loggers/Loggers.yaml
+- File: Converters/Converters.yaml
+- File: DataStores/DataStores.yaml
+- File: System/System.yaml

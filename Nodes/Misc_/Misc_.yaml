@@ -1,0 +1,10 @@
+Name: Misc.
+Type: FolderType
+Children:
+- File: Retentivity/Retentivity.yaml
+- File: Reports/Reports.yaml
+- File: 'OPC-UA/OPC-UA.yaml'
+- File: NetLogic/NetLogic.yaml
+- File: Security/Security.yaml
+- File: Translations/Translations.yaml
+- File: Scripts/Scripts.yaml

@@ -1,0 +1,63 @@
+Name: Banner
+Type: FolderType
+Children:
+- Name: MessageBanner
+  Type: BaseObjectType
+  Children:
+  - Name: MessageExist
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Alarm/MessageTriggerBit[0]"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: MessageExistTransitioned1
+    Type: VariableTransitionEventDispatcher
+    Children:
+    - Name: Value
+      Type: BaseVariableType
+      DataType: Double
+    - Name: Transition
+      Type: BaseVariableType
+      DataType: VariableTransition
+      Value: 2
+    - Name: VariableNodePath
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../MessageExist"
+  - Name: ExpandMessageBanner
+    Id: g=9e1417bc4d5a105ef4f0c3a9e2a93c95
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Variable1
+    Type: BaseDataVariableType
+    DataType: Int32
+- Name: AlarmBannerVariables
+  Type: BaseObjectType
+  Children:
+  - Name: CurrentDisplayedIndex
+    Id: g=1a30cbc991bd81337244183cd0800f04
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: CurrentMessageIndex
+    Id: g=6bca8b118423a6422c74d10fcb6616ec
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: CurrentMessageArrayIndex
+    Id: g=dceb04c3e92d75726862bce3a2c98059
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: CurrentDisplayedArrayIndex
+    Id: g=8494ae6d0ba2551c468108d76b794b72
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"

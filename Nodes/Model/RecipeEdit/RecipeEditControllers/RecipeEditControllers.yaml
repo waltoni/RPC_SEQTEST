@@ -1,0 +1,6 @@
+Name: RecipeEditControllers
+Type: FolderType
+Children:
+- File: Basic/Basic.yaml
+- File: Sequence/Sequence.yaml
+- File: SequenceF/SequenceF.yaml

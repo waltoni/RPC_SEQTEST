@@ -1,0 +1,4004 @@
+Name: Array1
+Id: g=6f0a418de5c9a5dd9c597efd062bca8c
+Type: FolderType
+Children:
+- Name: 1_0
+  Id: g=23f19f9c98246b5464619cf50e1cf286
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=3631b92754aab49bd8ae353b260ab78f
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=1175234ecbf9f2f9da5ea6d6dd334a18
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=534023cfdb7b038ca5f5cf48122dbdc3
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=b2978c58a867a47d912ec89a40698a36
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=6a83ebfd6f9b18a71d88154660d73bd4
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=6751b9550d76c9f5a5f5495cc5176761
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=06edd4ac3cc47a223779f6a787fc2e16
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=9463ca58af11afff9cee1e8fb96806d8
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=9a481c6b20730030b9bec801a6bb1fbb
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=21e27e612664ba9687234245fbc00002
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=4f99f38217fdf0bc43d099b52ed3628b
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=bd27438cc82a3782d2d920143a44f426
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=9cbbd8594a08e9702883693500cea16e
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=b28dcadfe9dbb46f5d2b587560f4c2ac
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Type
+    Id: g=4c149d38c65b1d72893e905b654430d6
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=4cf67cee659fe60a6b5dbc161963fce5
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=3d0da23ef42f2ee12654a9cd24852a2a
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_1
+  Id: g=70be92f1408b51c0689dfb638f7ee08a
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=30439b4ab8b9d3ea32e3f9154e5b9e9f
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=b8a216546f7c3402d38d8e9a98d95040
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=e7e7c061c0b0df1eeb26a8f0452ec694
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=5aeaa16dcac1e6aedadd17f504820d4f
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=89d705f89531d681f750bbc18262cfa8
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=7578477456e48a72ed482f460b74f742
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=62a23ca94b38aa24978b5888060d1543
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=90597f5f43039c41566a2d86f8416a7a
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=9478be8c4ee798628c0f0973c5d75cc2
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=031f6365926db0caa21d90739222f779
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=f073f2fea324ce388cf86d72d42d3df9
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=5f7d50ee442a93e3aed320c8bc257e4c
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=e44e4a6a7038e0cb5b2b6406860aeb85
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=b2d15cdd61380bbe3477c2f1c46f5264
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Name: Type
+    Id: g=201a6f259ff581908b2c1fb0045947d0
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=48fc64db60c7b6ab40c4860cc6b1fc3a
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=9b68278b8cbf75536a42f08196ded125
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_2
+  Id: g=cb0bd203056ae5fe4cb812c5a2a44e05
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=42b98274b7edc84798d6843e669e1d0d
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=3b9c68beed672f778c1b7417b770f6f4
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=ac2d3e60bfd493b1c0039edbc95056d5
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=925b0d723937396404c047187e95532f
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=bd77a6c3146d2734e7d557bbc56ad686
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=b3827f276f716048d9d29ed6a43d8334
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=940a023ccdb2b8d27faa895d42022a09
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=68bedd8ef1af780d8ccdbf4f13c775fe
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=47ad17a4e018c88d00b5a111a9cd10bf
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=7995bb9b92157d03ffc73c1167f15024
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=265a62c87ff3faf2fc38291d8349d7e6
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=15ce4db79c824378d49081edba3bd298
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=ed0b82e4fac075fe1c4a9225866fc2c5
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=95bac3952daea50d2cf9c476a7b0b121
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "2"
+  - Name: Type
+    Id: g=c0525a0809e48d0bb724a6bcc64cf8c0
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=50ff009ff6267e24b70db2a39370ab5e
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=97669a666629e053fc329f0398e2126e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_3
+  Id: g=1fbe51e0e1217dc915d0e545574dec75
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=a5a141317d4aec35e5c74aec3df7f372
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=e49e44f0e742fc811f5c774e570e932c
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=1c37cca87ada4ca035098cbf8587045d
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=94969e546748869f44879d7b5b1cb068
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=9f4c322291d54e683de4b67e27378052
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=73c137bb24a02156116181dc289cb211
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=3489d1c47f3e0f162a8bee0646657aa8
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=9c4dc8b76913e344226affab335af724
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=a8ff6e184621ce85a97756a5dee04afd
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=3f1c0d90189e096f9c9f7cf57cdf3973
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=f8d65ec0f127de40b12a32e222ae27fc
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=86d67cb5d4a58ba95b4a696fcd02c17f
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=9a62d72baffd7f0286d605565e4b176d
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=7f62fcfdae15184a21dbb75badab7c10
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "3"
+  - Name: Type
+    Id: g=df6cf999c9f4157762ec930ed345068f
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=1ee54d4d8a60a2b2830721a417b767e2
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=045b216ec18995681a5b86f33aeea2fb
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_4
+  Id: g=2f8d27d73f6b00f92af0b9c46908ae72
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=aec0e8d59d394b3423092972edacc603
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=77f5efc3f459d7d412586fac66ce0be8
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=9a710572235cf7520f96139211ac265e
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=7d3a5a6f0ffc34c1b95baa8916023d1a
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=6116304d4ccc0568f62653666136a8d9
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=9bd68f21cf0807425a101fb331e4dd68
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=60b7cd4fa4c7ed96ef40d22a4f114b9d
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=efed36681f4a298700768e697f5d19b9
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=f44869602d3d7befd1eaae81fd56b35c
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=b118b27999e91268537abb215506dca4
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=bcfdce5192a9dae496b184e7b49d6a17
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=20ecbfbbe4a18992e6714288e8ef71f2
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=0395e1d2995a52c63f173a9d0744d955
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=00049f141fb91c5565e3ed574921e5c3
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "4"
+  - Name: Type
+    Id: g=f2978c0ed2ede1d6cf0346bd9f240f5c
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=10b47368eaeda3fc582be59afaaf2bc2
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=2dfa130e2b5d6113873d9edda0890693
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_5
+  Id: g=861e5fa7018ec6e06264b02a66ad7f77
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=b9a2a9b072c15df5a65dfb62c0cbdc37
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=000aeee8cf53ceec3b193f35ba25de63
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=cb77e5060117f540c5b3a3f868c57887
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=bd513ea3968c742fd5f6918735bc0ba4
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=2287fb9c56de0cba9b1b9759c94be01d
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=b6ca2b12b8449da91ab80faf0fae40bb
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=18e8f14e73915d04378ad3bc27520034
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=3faf69e5c830a9cf2cf908db96fc5caa
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=aa50497842e86087b4917681896a114c
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=70f270801371247ae5e5d628b135a738
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=0f9e5fbd0abb6c3600b2bd008f59d4c6
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=f8851b6f62a14c8032d657a6e6dcb7c5
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=b5397897776d777ebf6be733a31e2710
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=a2721939934ab2e5b5a4a5a740879f80
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "5"
+  - Name: Type
+    Id: g=d66964c159c55e884c0752e6dcfceee5
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=039ebd3724f856adb5b9abce7f1bc453
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=db6e04a01448199f6ed490a4db268e87
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_6
+  Id: g=e03e9f478917fdadae603e262e083834
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=b14b577d8d6ce57ac1b5222752b4166a
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=2c604a2caca1adf429ba6c64c75cfe06
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=87b1341c447adc2f11ae49fa12650fd8
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=37ec2719cc5e08b62bd05b5d0b3c6715
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=5944ce1347af417f9fb35929cd113401
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=2429398a3886492b1191874303de1417
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=040ac8d863080043cea41e4c188fbae7
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=dbb642b8443e04ac6f7525eee467735a
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=9763501d4f2b3e69500e78951bae8236
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=1e6c039d774869c2c631c0e3ccb88b9a
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=5a5f25ffe499a403c47ece6da364fbf5
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=8e2c04b7acf93d3da40c8478010ca2b7
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=1e0c376a2359854e3e04dc69f1dd0d79
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=c5c1ea445b3d90f2ca9a1cbfb2e9ca20
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "6"
+  - Name: Type
+    Id: g=65f8580dd55e3262fc794c7c684d20dd
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=f2ac33186d926a87fb3832b2d8446694
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=85d4b63242bfb23e961db9c3edcf6404
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_7
+  Id: g=3c779fc98d2b07e72f41f2c6844d05e3
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=d4c9269a26f4dc5cc4a8fc7bef55f5ce
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=6e4d631def7e98384b7a8e2a38cc43ab
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=d003d80364c3958bfe7b08c6e422443c
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=dc546b872a2b2cef1cb0f9efc8c6c7b3
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=3fe7783b3e8e4c1427fe81736a7c9ea9
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=58f00acdc1b2c81691ec597c9842dc60
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=b9cfe0a702335f65d2cb56b6b2f2e578
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=a2b4efcc5f41e4dcdc7534f76735f213
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=fec52b0b89bfc4d25ba9334d5958d401
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=f22d141e9d9382f60ba833f81b6b8d19
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=5ed23450a5a203ca7b51de25e9e1ae3c
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=042590054b26220c0c79353f97ca759b
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=c10c18372315e7d172d01c9d7f9e40b4
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=35167be5bd9ba0de85b6605b5042589d
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "7"
+  - Name: Type
+    Id: g=01ca119cade481fb6b6db50cf3de0a21
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=011339e3c851b713d5887e119867473b
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=952057e4b88d21a142baa9a39d04fb0a
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_8
+  Id: g=b2e94490b7583cf87345ed1dedd068c3
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=1e3f0ee84570f44fc0498bae931e4534
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=dbe256f88e4b7e8ecdb1b178b6610b90
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=38e8136fa52c1698949805da6edaedd1
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=5a58f2e2e73698076e06d18c371e70de
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=00e939e4908c940b70682bd6bf949a8d
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=329da1650303a3e9a2e1c586f7d9d2fe
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=493627b304891eacec2511156df4141c
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=f5aa25f33f1d9c40d9e53f1a671dbe21
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=d98cee6f6b750e62dcddec67459ddf41
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=9e7274121103c5fac8b2755380f17353
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=2adbf4277e357950b92572a60d7d4997
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=ba9493ea1d4d9fd08223e627328c55a0
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=db0e5a0d81d5498b47e5d8c64c7ad8c0
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=fb489f628d1ea8413661bec876dd2d02
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "8"
+  - Name: Type
+    Id: g=ef13232b52ebc0d59eafaf30472cb90f
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=3808c526af084da989a795686f176278
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=eef93e2978a4fb77e033a6887ae61131
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_9
+  Id: g=e5a98b4c1909e4107f9940e55178f41a
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=d05b7eb5542fdd954b2fa4d0b6012b76
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=00840235bcedeb88eb31bd2603a006ab
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=5c62ae75254e8177937af5f35a3a6a09
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=930605ee2df957018a055b094af2a445
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=83cb9319d02a0733a688c0f5d9a305c4
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=58e815ce1f833207c4ec97fd56746938
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=5ad89ff52edac437414801aa014ae1a2
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=2780880da8bcbc7718ec4cbd3f4cdccf
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=eea058ec9767aba193aaaf6a07ebc549
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=e9f3bb1903b655d78706075f4c12c9b1
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=96858dffa69dd0ec6151ca7d0a99086d
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=21db41e297828491be3c290b37fe2683
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=9e883384e7ac3e15d95b3f860b9b29b7
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=dbd1c7fe2dc2390efac1bd2b63b3124a
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "9"
+  - Name: Type
+    Id: g=2107986eab63ffe1b1568763937bf159
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=96979362cf2ea81264378f98d403cc0f
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=bc01235e0c7fbe0ad23c0d062bf90cff
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_10
+  Id: g=c5f7fcc3fd9949215f31113edaf1f57e
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=b4673b6d3a93063d5d31bd273a51a213
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=907f874481393bc814bad9c3026f17fe
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=c2c58096a698786513256a384dcc8b75
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=aa5a2f6d02473790d90f21fe1be1638e
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=3ed990715e6a1521fc4ef1e2dcef81c7
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=900236f78705d5f41e7cc4b897d6cdb0
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=6d1b453cd860fca514e5f15dc79d8ac2
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=803666f6100a75aa0012de427486f94d
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=81c963f7bdbdc0138fee4242521e245e
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=19b72175a75f957a9023be9613df9d6b
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=b0869297eb30291dfd922460824bedfd
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=4ac8bfdeae0c6467b627fcfcf888cb7c
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=5a7fa42ee81114f274cffbf3afc625cd
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=d567a38c6507d7f35957e46db588d596
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "10"
+  - Name: Type
+    Id: g=3a1c3885b096c9bec73361c0b3fb541f
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=4377bc728b16ba09f4293e1500173249
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=0fb5924046f0c97352d6ccf906a5a518
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_11
+  Id: g=e2317fb3977bc54cefc1d609d92cf6d3
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=b2aabf4177aa1f9df8023628aa812617
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=d6f6107034185735d1144d53aae9d60a
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=011e1878c84c4b698d6455546ecdb512
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=1d2d484ddbf978de8c0437ac922067ca
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=e2659b7e0061563bfa3404dcbbce0ea9
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=c9fad37f9e77b25811df8b3e4d2c2af4
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=14d8a064cacdf287ad0fd179b43ad56e
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=53d9117f330dace1a3ce940929c74891
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=278f80df8de4d63e285ae4407985fac8
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=dfb38c7e9250fa00943f834c305a384f
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=e664415450d50d7b2c5582b298d1b6e9
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=a01f18ec0c422abc178d8d75f07ff151
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=471ab66b4fe8563995681b09be8bcdb3
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=0093bd44619d1ea98f0ac0bd2bf82d72
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "11"
+  - Name: Type
+    Id: g=d77e0ab7441ce9a45b4058fe4a6c63da
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=3dc850dcf3869d7a1c19d73e85e7329f
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=8cdfa520560eadb4bd465edd5879b8a6
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_12
+  Id: g=228939aa07cb44ce4c5d5d5e0c2b258c
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=347ae1b52e621df1938f6483b83f009b
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=5ed397efb28d597421e0c509860179b2
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=e905b3df272c6022185ce2ec72ae458d
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=55b7d2f020eefa3fb7f96d6e8e9d99d4
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=534cba8ae635d9e94a6156595bc0dbad
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=c352f716fc837787c1d9334bebf59174
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=b047dc89aaa10623fbcd06d22b965a53
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=2353ab1073f0898e5098e51b0dfd2961
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=8f6527b46aae2729966cd2908b9eafa8
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=7453023940e65beabaf42c4deda795cb
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=e5217451c229db7194a3d20d91d0a428
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=3b5a63106a979c47dc75cf66b9aa8f2a
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=7af4d3aca13d71dbbfdcd3b4fb2de3a2
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=e603b0ef4734c9cb3616f8d9e1310d34
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "12"
+  - Name: Type
+    Id: g=7a6fff2b68baf8607bee0cf68e571224
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=67de99866ee667c9204da558d2a61e16
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=fcd2971c7619ed54e6bd172ddefa26b7
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_13
+  Id: g=ed24f59f452d54dc32db7414dea0994a
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=0e281815faf073654eac1200e2fa43f4
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=600459e1ec870a47d555c3fcad2313e2
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=12a0c4fa854f62689fee6191abf75f2a
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=1714a19586560fc2f001724f025488d6
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=fae5d693d79c5fb79b8dcd062eae9254
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=caee1f3ed541979215a27979902f2f75
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=0cc090a49b732209796269a800ec05aa
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=7a30ed6bdde4bb8a12a1bd343a943445
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=e84b1e2652cc8c3357845ec6eba2d1a5
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=9316a7fe204984c2562efcbfc6d03c63
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=b5769ebbef7006716c33e8740d3b8370
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=a6a9b4372f0910f97f8d59651813caf5
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=be03b409e7b2507ce8607d5b04f75e81
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=a017419e8ebec16429d852ba6ae046ed
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "13"
+  - Name: Type
+    Id: g=cef151e8a201f5adfa9a145780a7cb41
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=31b7378617502a03a1f4813aff1102c4
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=a82edf8995552c83d3bfd53be1f1ce1e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_14
+  Id: g=e2450fbf3fb623f8d4aa22e57ea7b4cf
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=330167ee3ef101a363af2a6e2fbc6369
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=498b6936b69489f23d45819172df8f08
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=a93b58fff5c565838ec4ca6c87cc5b58
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=24361561752285267b80465ed8347cf0
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=2186b835aba7dee68966dbbd15b7e881
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=5d18e36f3a7785b6b1ec0d1ccc045760
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=a38bd46b12a8218c5b37585c04126769
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=3523c06cf2da7dfe66ae2494c08cdd50
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=0c85c3e193ccff32b881c95f6c6dc577
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=252d09b49341cef046f21b2ecc91ef34
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=f7e8d4b7077e93b3e6c7e4c85f5efb96
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=0dbe4c9444b83a14c53419ccea4aeb65
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=e96800c9b639bab9f4ec9afa802395bb
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=18a1a9a4532897fc750b013faaf69da9
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "14"
+  - Name: Type
+    Id: g=dbd07c34f03846da7021b7ed9d77ed11
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=616865363f6d0cb44d55e1d8cb31c4ea
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=217eba01d5a6d11134fbfd24f688065b
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_15
+  Id: g=b1886bfeebe755a5e6b9f8bac6868928
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=e62284945909f66539132d2f58371b35
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=d34cc7944770c64fe0899a2eef1bb6a5
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=7bd2d633c7e54521acf21f128e3857a0
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=85d051968f6adaaf3cee218acc8962db
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=500287a17a120549a62d8abf3a01e124
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=1f777a11f982a5bfe3936fda1d8dac84
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=967ebb114652bca3775e6fb001514185
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=5fd3289264dc9987690595856031a3a1
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=4e2ac4d61cf0726eeca30b123d6ac013
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=fd2d1e3ead529de4db48325702d01772
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=5e5cdb68fea754f574607e25fd093f3c
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=d5f9d5d07b6d880879bd8c47cd82184d
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=7109e7b28216754d7a091e78bc94106d
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=333dcc66f8863b9515ab5d3b24ad9a3e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "15"
+  - Name: Type
+    Id: g=18c0b0bd3db6aa9b3ee63b4f22258adc
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=fd188d8c85e302667f539f46b177b440
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=0a0b619f1eb16ec0834d27108b53f926
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_16
+  Id: g=21d5a54e7dd604cb8d5cd36499a08dad
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=ce623ee03c48ca01de37f3000373fd74
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=1072e59a90bf08248dfd07a533b414cd
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=79af49abf85640fcd71183e8beecf652
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=0f504fc271b2115d85ffa16e8603d17c
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=1fb4498104939d85d85b8409458b372e
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=bc57475ffbd957e8a765a4970aaaa409
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=a030ac631b88eaf5cc959ba090ecce08
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=d46c85a86a95bbdfcfb8432cd54427a8
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=5f1e44bc09a4887b762c2e8ed4823151
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=babf3fa626a869747372cda0094a25e2
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=bcc00540167c8273b189f2cb6cf694d3
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=7406644f59ed725760b5410e05e42464
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=2e611929120740e45fa717d97ae09620
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=cfefeb6fbf471ad8798c0074b1567987
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "16"
+  - Name: Type
+    Id: g=52d1113ff6f124f5c2b948ced59381eb
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=cb25176a93d58a4548aa80c1aeff4b55
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=352ef5d13b8afcf9046f29f69ee95383
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_17
+  Id: g=568d00823b67aa0583d240ea4a7bf51b
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=7eef62de63c945a8f753b30f63a99df6
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=746a08c5ec81dab60a7d8a970e159a55
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=a45cb1b1759bc9378708d4f5d8692258
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=8de85f4c1c3d4c341542872ee4dbb8c2
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=c46894e8c226145da82e38ea8432b1ae
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=1ed5ed03dc33c5f1c0bd1eecdecb425c
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=c829844f5ed3d4a9da5aea3a6d82048d
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=f9b6260152593055ce1f65d4580610a8
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=473849cb3c605258d05dd6f70e31a94d
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=a26ab551e2947a276aeb92b76123ad2a
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=0a8aeecb3e3a48d28350f11d97b22abb
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=fb4394f89f69a0a79efd47bffd19ef46
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=d50fd142e98ca94f59bf3865f5aae20e
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=58516687e7c8d6f0a209994353a7170d
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "17"
+  - Name: Type
+    Id: g=bfe01cdf28e44589ae6c9e6f431906d6
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=5500da12e215ac46ff59012538fd055c
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=46150ab667116ef1dea1acb6db95124f
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_18
+  Id: g=a0ce8b9d39ccdab85bacc30978453e5b
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=0f96da06c4aa5c33b70406eb2260cf9b
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=b06ac16cd117258e71df589b57f65474
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=734d54546ae36854f5fe5f380cd94c0e
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=4c6e81c837d1b236587601f5bcd03eae
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=4e8bf1ade15dd9da727208b3bda0ab01
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=bf8bb0d7a3c22ff5d1fccd0a81a7ce33
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=eb70248cd2ad704a45fbebd9defd2c5d
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=54bf89a60d40c4ee5b9f66b0fa4e2ebf
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=5b7edd3c5004d3ec157b4f3164c8af13
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=837e7642ca89e71969a088721ca912b6
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=bef4f42149bf55e083b7a12917d50e64
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=e484bc370c91c64a740200d11bcee948
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=7562c14093b2c9cd4e828114310e5b72
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=e60051108405b1ea975dce887c48aadb
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "18"
+  - Name: Type
+    Id: g=e26afcfeba55f1b0ba7148c28a17d867
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=504a77286eff45c94ad1cc9041cad5db
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=38075805bf689842f4cb71193d4cec1e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_19
+  Id: g=00ca0fe26a8326996cc900c9e645def8
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=36f6b67c4b4d39be69d3fa5589f69ea2
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=4087907b2c931c331969cd8b37e9090e
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=ae1c8afbb454f9b217c5412399b13401
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=42546cc2bfc25d24dc6406adc1b81981
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=cff614087167cb845c5e6e05848b2a25
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=e0afa44467e8cca08cd5e8dfb5c225c6
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=64aee424de941085dea11468a7459ad1
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=d87ebffbd9e1d0938eaaa7cd51efc826
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=77f6db18ac5e4cb697c8208aeb93f93c
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=8d020b1b047cf42f6c2e186226a4f637
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=5ebb9c16ddb5e006c041df14131a57a9
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=d691d22183adfdf29a32af8b4afe27be
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=a58b69663d9c0018ad9d521452f78070
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=1d57f30cc9e43ecfa13c9656abff0798
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "19"
+  - Name: Type
+    Id: g=839bb995c9481e56816aea078bf1a91a
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=487363966a88bd48c6fe97394a46abf9
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=3d0d624842df853b568564b33f73391a
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_20
+  Id: g=96f6ce1a99f91cfdfc203a9e994cb193
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=2355081a3e9ff3b361bc735d9893d9ae
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=f0b91497801c9332d41596c58eb90ee7
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=027f8443b82cb982374cce3b8b7c5988
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=ae0071ae24455db6bda95a5005ad5693
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=8cded89c1d07e1c4725c6ef08e7dc617
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=6e1e236d1f2a637b3c4c4fd24ee28981
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=8787224dca69f9e527f7b4cfa8189ff2
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=1803321f2a0318cd45542822b95d8c9e
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=9708be91887405b9e41d33c6685e1b0b
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=352abf811112cda97c2375be120f4b6d
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=e489433927117c79df4b89b6e1dfd7dc
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=b20f1effa1b41ac7ba2f12403f6bf6e3
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=29628032fb20ed69187165dfed764904
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=d1dd0807a762d507a9506753182740a0
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "20"
+  - Name: Type
+    Id: g=a46cbd16aad22eff9e84b3bcba49685a
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=fe4f6b961ae7824fd8b277c59bfc1d61
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=de8392392f6c727cec20e20b95563284
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_21
+  Id: g=0bf38ee953c641e49618de69837155f9
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=2b164af90f025277a27a7383475543c5
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=d325c32a5bd9813e3e5538e4552875a9
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=dbd53c5923c5d99bc6c2096d07d0bd3e
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=bfa3ea6a4486745bb63399cac16274fc
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=4b10d256db747b36cbf86b5cf0f74d15
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=b60da3c68d3b184ec7c3c7c212291e62
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=b7db2538e5dca4010b198f9dec3b5e80
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=442c11114d47cac67d4fed699acfa698
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=a953effecfe129f0e582a86572b50f08
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=9b48ef4897251ef07b12de83257d746c
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=0c502f5226c906682dfd598ef957e0ba
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=1bf492f8116d4436e9f40a7b4b0e6f42
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=af740a2c677d654f729cf58502117fba
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=73dd394863f70f52202222a30f40f38e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "21"
+  - Name: Type
+    Id: g=24431220688dbb97aa9f2e7f1cee0d9e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=f1caf948b8fe5b761cd9297abe56dadb
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=dfe799b47de27570456af2d0f3b9c14a
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_22
+  Id: g=603c93b9239c03030b5f092139d98ccf
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=bd0ec92e86ffa96b48c136fd891a8565
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=3af31638b3a012a3b198266a003b5ae3
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=5ae0cbab509db52a4fba51e79380edfa
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=0e93f4a51d964ee448d0c49c170460ce
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=d2496c4ec03af1d644404923a3d99709
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=8a9ab4581ad9da917160d7bee36d3492
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=84e0b4340d9e25757ecaec81ca9041cc
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=fb5c855b6ad55a0f8bc189cbec92b535
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=8d0f2bf257b31e0d8c2182f17e0726c9
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=3fd4122add61bb536fb90300338d4f78
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=56ede7af6048e3542f34976e4a60c6ea
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=8deb4b61af1073ce40716011fbca329b
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=ee36637774ad944991deb46cf79d86b5
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=6139abcc5333a2cabff11523198aaf77
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "22"
+  - Name: Type
+    Id: g=2a9939a076af58c1a14d539e54bc4f90
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=91593ee4a5e4340ab91536451f6238e7
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=a6d7cba14f38c4d7d365c738764a9ccc
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_23
+  Id: g=9fa27cbab78bb3a87a7783c40d49c4c5
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=8c850be452250add96ec75feebdc6782
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=a6bf634bebcabc6696b3a51af4e5b7a7
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=ffbaa83d450c455b6638cc86552fe2e0
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=a81a04e1a4da87ab78fbb05c904e9a19
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=d6e6ffb60332e00848289212b1ddd76e
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=bece974f2d75a830d45a7ddc17c0a519
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=6c2794aba91fbd26713278a260133d16
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=63fed024d56b147a437c67d440176682
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=b080108957f625ca35e40b116e13c3c3
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=ae1200202afa764ad8a8068aaff1a7b3
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=b4de34e7daea80d4ef8c149afa64773c
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=15ac2d36edf284fda50ec68e9056df68
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=b542ea8f6dc96cd5bf70e89273e50616
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=95db1a68cfc9651620634e17f54a39a1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "23"
+  - Name: Type
+    Id: g=03accbf4dadc33bd3b98aed6b83128fe
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=a32f3832f159c320e349f44935009099
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=4400d5774b05363162204f62f3559ce8
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_24
+  Id: g=e7236ae7b72de4d60827445b3df5dbcf
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=a64462a3e7ef2e63f344a7da1ab12b08
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=6e89925e0104dce5b0b7bdd0b30792c4
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=5c37587749f7eaba6e0b8ef13bbaee67
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=c40ec24bc2b42180049bece509cbbe52
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=8375f7a9100cc43436de9835098b60ce
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=fbe7a4d30569a8a91c3e8e8d41c075ef
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=69fcf39ce7ca3aab6581f246da0c0cf3
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=197f02083624acf2556286973ec452e8
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=4cc89ef878264de8e81e5dd63ef7a24f
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=0d0609e886746e4a3214e0e9f2773a36
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=1c1f6feee62013d9ae0afde0275412bf
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=d672a07a0c59ca2f224cc2f2b93286c9
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=317e95f1c29c3ecb2b5dcf52f2976de6
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=11455094491153c079b624a17706934f
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "24"
+  - Name: Type
+    Id: g=0a6c59af678361798f7bc5b94f5b9dbd
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=f3ce51ba6d3e564a563afdfa63bc7b7b
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=9e61822e0e5ca19a3096a4b3766a089b
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_25
+  Id: g=22514e8b9f77fa3dbd6edcd56602c464
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=f698677d3ca791d0945b1a76d59e95c9
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=512461a30e8d85a1229d843cbcafdb85
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=d49b49f7379fb6f43d6729dc9de9c1e8
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=4da8ba43666a3b3310c192530c93e089
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=1d9107b1ccf8d0c02a0a62b663d07adc
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=eab120b5acabe64e5e43518f44ccd705
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=39d43bf1b3e13fe28cb89b72670bb97a
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=7d5a9e8b73f1a991cd6df1fabd1fca89
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=19e13d31da2d7a37e90b86e09fe6dd32
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=74d7df14e978543fc238a8425ee1f6bd
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=0854c9f80598c9ef563698e54acba28f
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=63a3903d5b204bee806e191e7419249e
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=37842b107395832ac0aa962fa2fcf7e1
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=4c48f5630d1bbfacf4794515afee1228
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "25"
+  - Name: Type
+    Id: g=1748521f4361ac7180ab13b2d41188bc
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=fffd4a2bf698c230add8ae6aeb1d052f
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=cee2778b3763e45818255f6f597c7ed6
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_26
+  Id: g=69d9053c14c6fe94709f0d7a02fb14b4
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=7a499a0a4458d3673d35837670774771
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=a4ea0793337c34a25968e417ba6a5cfb
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=db3f84304d02a78e4bcc3be3bffd5bcb
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=5e5b6fed0f50c48c5d4346bc17548033
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=c26248ad545398d17061fe96e341b93c
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=72dd1392f11ba0115389b899657e898c
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=de495c3c3e6f46eca745c8816ee1552a
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=04b3f3d7a3c6a016a0931087d7efab55
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=17b450e53e9c49161cdeb2d7032c5c50
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=ba30248e67dba491c53dba56a8970d78
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=5ce3703ca5ab6984e91f75ee78d841bc
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=79578bdefefc911f322c67afaa7f2101
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=f596143fc161de456e390457c42f0d51
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=869d5dd0b2ecee55a4037a286f0c5693
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "26"
+  - Name: Type
+    Id: g=467f3929e8d9edc8edeee3aeefd2e073
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=26ab9b6dc72148f965f27c6916cae985
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=d53e673d37c9e66f723a073ca2a19b93
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_27
+  Id: g=f249b742ac3423181a95a73a99074808
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=07a062ccd12c412d54c222c39bdfd0fa
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=daf871c82a4abf84abe863d2d44d3958
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=f6690482e82ab5b4f7a49289901d89c7
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=b47a921ffbb8b8372212312825e9b3a4
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=cfa96472346db70f6f851b270715a997
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=75110ad142a090bfc9c4c6cdf6003f6c
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=7da87f53e1f3c88685d6f8f643d2dfc6
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=a40bbef0d50f391308e74b49b10442f0
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=ff57d080c7a27a034f962f9ca35af08f
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=3bff44cce4ea7be2bc4505d3f35565cb
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=b9b5c07487648f80c1d08af80204d2d3
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=8feba28f947aa57c30f74732c0407b1b
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=ae2d7297b3dcced82b5c00d4297a2c98
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=3ae12740e6ce1ff294cb1c8cfc68a079
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "27"
+  - Name: Type
+    Id: g=a29d9e8813c85d485cd6c000aa1a0b90
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=7415cade2a065194d99de8049b24f9f0
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=9fd86b38e6516c0f96962aefc31d384d
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_28
+  Id: g=a37238f9283e7cb8237dede00422e942
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=606a91a86456ebcdf761de778a429228
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=c84b216d69ab2ee9f7b3c04d6807f3c8
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=98ff5305c0fed591ecd72fd51a8e3bd4
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=22286893a4e873238136345da8c61ae0
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=45c96c68f8f23ffd63985af4794b4d2a
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=91bc967374756acbf5959b00b3bf52e6
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=ee646ffd7242242afb2f7e9e94666ecc
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=831e87039eab59daf7a8f71b9d7db301
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=130f5742e9fd734cc16af41af0574087
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=e7a7320ed70d6af477f9b6d23db57f55
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=e8e95ccbb41c14c5a96488a79e72626d
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=0835e6575bbe4ad1f23fdf0975807081
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=fc80cdeba14b57b2bea42c1649408793
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=ae2ab7d8ace8645a9b20f8cad93abcc8
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "28"
+  - Name: Type
+    Id: g=89299e2424a4a4fe1da7b3f35adbc5ff
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=789b55980586f1ef9abfd8e5bcf3420a
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=d5ac5d388bba1755f240c364838ed7d5
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_29
+  Id: g=d42b2ff6c39253ddd903c7f3ce4f5280
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=9f8addeaeeb0265bf5e7b0394cb068da
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=d1a8fd1d686f7fec2b0c6fde1905bf1e
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=4d124a2aeb9cd0065ae79747f17b89ac
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=e4b9ac4563c698ea4eb78f7789c3a679
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=65f65e495e61b13a6f243f1402b21037
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=4fc66e5ca1cdf14447e29ae4907af936
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=e54aacf0a2ff4e492bf0870a5ed4f5c6
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=c08d0cd78803b5d7f9ff05d217da4696
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=7498c7375a46bfb317b033c2c070b72b
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=f8bbf5006a3823526e2b797261570720
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=dffb4439386ecb646f70fcf33aa6e86e
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=48d608b68405b77c10c8ba44e801ba57
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=3a8cb5e53f972dfea2ff09d9df95be5b
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=1d8dffc23a705543e488da538394cbde
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "29"
+  - Name: Type
+    Id: g=0096c1b6e4c7bc5262c6f7bb090b6d90
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=49d1861e16a9218e2cc92208367dfaaf
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=2378a6e57aa5ece83105a98afdf6874c
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_30
+  Id: g=767edc6e18baa5a32cecba674d80b921
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=a6d12cb82606b9d13129bae9b551c6d9
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=dadafa5de46c54510235ccfbcfd18f30
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=31828043f32c66542c5da30d421bef44
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=21dbe8e141eb63fd51444543d32ad0e3
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=be0c5e34795c3ffc992e204aae2f3f79
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=7f89d2f0fba1ad03e79b79d92885f736
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=482e8079e834ec9e3973e6b7710b4967
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=2f30bb141b74edd9e240bc5db2c580ed
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=d4e6ff43b8a31ce072ca155e3aa3a80c
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=b8423600b642afed4def234dacb9a849
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=038aef148e4007c6d6610ce40ae4380a
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=a71b2b6d54fb4213f15680eaf2645254
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=e2c5c54c656e53391695124988016b12
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=e12c6266374ea7a5e44319a81c4203c7
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "30"
+  - Name: Type
+    Id: g=634c754acdf85f27092887f504adeaa9
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=dd53f0b7c8c3ad23d05ed53875f2ceef
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=cbf7fc2cb604f2d84072f09a0eb20eec
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- Name: 1_31
+  Id: g=d6a622fb29fef1ed5e1d25f67a4eec12
+  Type: TemplateAlarm
+  DisplayName: {"LocaleId":"en-US","Text":"RESERVED"}
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=2a7103e690fe9ac07980ecd27ce4e55c
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=69131dffbbddd8f1d75290c8927d1041
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=f263b4f51886b353d222a3f1634a8f97
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=19a7fdd6ca33b5b269a43b9aec149951
+        Type: StringFormatter
+        Children:
+        - Name: Source1
+          Id: g=f4e1bd10019d13537d095d75e05aeaaf
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=ebc2a92d34c0b60dd3b14fae70d3fe55
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: Source2
+          Id: g=4687b3d68bc790118bbe237aad836963
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=c2730f8c7a95d7c700ca83d4044a3801
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=07b8822037ce685f4fb7b5c69ba5c533
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=982ea2f5f84f8342a0feef946b4098b1
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: Source3
+          Id: g=886ae5fc2cfc47aeed06fc1f108d9286
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=f54133555a0315567df42ab1eaf9f95d
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+  - Name: LastEvent
+    Id: g=0adf6d02ed6feb06bdb34e9ed0ad3e0b
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=99dd579dcc74c68c0b0b83acc2e44130
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "31"
+  - Name: Type
+    Id: g=e2b1b9b0c7060879ba338cc39d5e0383
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: Message
+    Id: g=1634a0a8aa1ce83136d6578758f35464
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"RESERVED"}
+  - Name: ArrayIndex
+    Id: g=90ba217fb8c3196bfdd4af87b27d5f06
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "1"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward

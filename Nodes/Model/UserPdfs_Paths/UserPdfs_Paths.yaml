@@ -1,0 +1,24 @@
+Name: UserPdfs_Paths
+Type: FolderType
+Children:
+- Name: RobotManual
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "%USB1%/PDFs/Fanuc_Manual.pdf"
+- Name: Electrical
+  Id: g=442291c21aae22cec268f1d703eb0178
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "%USB1%/PDFs/WireSchematic.pdf"
+- Name: Pneumatics
+  Id: g=e0e40b5d6065782f0ef312471b7d3d66
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "%USB1%/PDFs/PneumaticSchematic.pdf"
+- Name: Manual
+  Id: g=91cb0491f94dbcec6199489917bc34df
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "%USB1%/PDFs/Manual.pdf"
+- Name: Import
+  Type: BaseObjectType

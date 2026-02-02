@@ -1,0 +1,45 @@
+Name: Login
+Type: FolderType
+Children:
+- Name: LoginPopupVariables
+  Type: BaseObjectType
+  Children:
+  - Name: LoginPopupVisible
+    Id: g=0cbfa3e923c5aa64f9cd3f14c8c40518
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Panel
+    Type: BaseDataVariableType
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+  - Name: ScreenNumber
+    Id: g=0a7173a2ff84493f2a7f346e74c8083a
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: GoDirectlyToScreen
+    Id: g=ccf7d8367239eb92c00781d232961159
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: PanelAlias
+    Id: g=ac0131bd165e2edb13e6b1b9d325bf5f
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+- Name: NormLogin
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: true

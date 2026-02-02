@@ -1,0 +1,72 @@
+Name: Scripts
+Type: FolderType
+Children:
+- Name: MessagesScript
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: Propagate_Message_Names
+- Name: AlarmsScript
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: Propagate_Alarm_Names
+- Name: SensorsScript
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: CreateSensors
+  - Class: Method
+    Name: Update_Custom_Sensor
+  - Name: Sensor_Change_From
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "In_VS1_EOAT_Z1"
+  - Name: Sensor_Change_To
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "In_PS2_EOAT_Z1"
+- Name: SolsScript
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: SOL_Change_From
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "SOL100_PalletReferencePusher"
+  - Name: SOL_Change_To
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "SOL3_PalletReferencePusher"
+  - Class: Method
+    Name: CreateSolenoids
+  - Class: Method
+    Name: Update_Custom_Solenoid
+- Name: CopySequence
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: CopyRectangleWidths
+  - Class: Method
+    Name: CopyFlippedSequenceWidths
+  - Class: Method
+    Name: CopySequenceIndexesProperties

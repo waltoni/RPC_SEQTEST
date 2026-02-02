@@ -1,0 +1,4 @@
+Name: Messages_Instance
+Type: AlarmsCategoryFolder
+Children:
+- File: Messages/Messages.yaml

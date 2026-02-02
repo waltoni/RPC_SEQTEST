@@ -1,0 +1,8 @@
+Name: Global Templates
+Type: FolderType
+Children:
+- File: Sensors_Global/Sensors_Global.yaml
+- File: SOL_Global/SOL_Global.yaml
+- File: Message_Global/Message_Global.yaml
+- File: Alarm_Global/Alarm_Global.yaml
+- File: Alarm_Preview_Global/Alarm_Preview_Global.yaml

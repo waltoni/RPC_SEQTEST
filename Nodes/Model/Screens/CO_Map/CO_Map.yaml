@@ -1,0 +1,13 @@
+Name: CO_Map
+Type: FolderType
+Children:
+- Name: CO_Map_Variables
+  Type: BaseObjectType
+  Children:
+  - Name: ToggleModal
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Index_for_Popup
+    Id: g=6748784c1e2f67913895a6b4ddf0b889
+    Type: BaseDataVariableType
+    DataType: Int32

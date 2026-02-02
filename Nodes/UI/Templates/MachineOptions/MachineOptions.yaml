@@ -1,0 +1,9 @@
+Name: MachineOptions
+Type: FolderType
+Children:
+- File: IOMaps/IOMaps.yaml
+- File: AlarmImages/AlarmImages.yaml
+- File: ChangeOverMaps/ChangeOverMaps.yaml
+- File: MainScreens/MainScreens.yaml
+- File: ManualControls/ManualControls.yaml
+- File: ConfirmationScreens/ConfirmationScreens.yaml

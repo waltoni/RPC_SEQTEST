@@ -1,0 +1,625 @@
+Name: Screens
+Type: FolderType
+Children:
+- File: Home_Machine/Home_Machine.yaml
+- File: CO/CO.yaml
+- File: Glue/Glue.yaml
+- File: Login/Login.yaml
+- Name: ScreenCurrent
+  Id: g=b0015f0bb0435c8ffcc533bb282eece9
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 1
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/_HMI/ScreenNumFromHMI"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: GoDriectScreenInterlock
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: SetupVariables
+  Type: BaseObjectType
+  Children:
+  - Name: SetupInEdit
+    Id: g=351d064332ba78cb0135980ac98a29a2
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: SetupSaveRequest
+    Id: g=6716a87df8bf33de9d968d78ad1cb3a8
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: SetupInEditTransitioned
+    Id: g=e26f1a00b3ce5b4d52860fff955888af
+    Type: VariableTransitionEventDispatcher
+    Children:
+    - Name: Value
+      Type: BaseVariableType
+      DataType: Double
+      Value: 1.0
+    - Name: Transition
+      Type: BaseVariableType
+      DataType: VariableTransition
+    - Name: VariableNodePath
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../SetupInEdit"
+  - Name: SetupSaveRequestTransitioned
+    Id: g=506c4c67132160a1095549c930846956
+    Type: VariableTransitionEventDispatcher
+    Children:
+    - Name: Value
+      Type: BaseVariableType
+      DataType: Double
+      Value: 1.0
+    - Name: Transition
+      Type: BaseVariableType
+      DataType: VariableTransition
+    - Name: VariableNodePath
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../SetupSaveRequest"
+  - Name: SetupApplyRequest
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: ScreenGoTo_FromPLC
+  Type: BaseDataVariableType
+  DataType: Int32
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/_HMI/ScreenNumToHMI"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: ScreenGoTo_FromPLCChanged
+  Type: VariableChangedEventDispatcher
+  Children:
+  - Name: VariableNodePath
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../ScreenGoTo_FromPLC"
+- File: StartupConfirmation/StartupConfirmation.yaml
+- File: Recipe_Select/Recipe_Select.yaml
+- Name: IOMapVariables
+  Type: BaseObjectType
+  Children:
+  - Name: ShowOutputs
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ShowInputs
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+    Children:
+    - Name: ConditionalConverter1
+      Type: ConditionalConverter
+      Children:
+      - Name: Condition
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../ShowOutputs"
+      - Name: TrueValue
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ReferenceType: HasParameter
+      - Name: FalseValue
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ReferenceType: HasParameter
+        Value: true
+  - Name: MainEnableToggle
+    Id: g=d3352ea3616e91a0b75bff710ee0b658
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ResetToggle
+    Id: g=a02b3a556f1ed3bbbe8c58192aca638a
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ModeToggle
+    Id: g=997b287b422e1b09749d3f193a304666
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: CompleteCheckToggle
+    Id: g=46109f0d9820159d51a0ebcb674f7518
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: InputInfoToggle
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: OutputInfoToggle
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ManualControlToggle
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/PalletManualPageActive"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+- File: CO_Map/CO_Map.yaml
+- Name: ScreenGoTo_FromPLCRangeTransitioned
+  Id: g=9e478c33477e8513de1d455be1ebf86d
+  Type: VariableRangeTransitionEventDispatcher
+  Children:
+  - Name: From
+    Type: BaseVariableType
+    DataType: Double
+    Value: 1.0
+  - Name: To
+    Type: BaseVariableType
+    DataType: Double
+    Value: 100.0
+  - Name: Transition
+    Type: BaseVariableType
+    DataType: VariableRangeTransition
+  - Name: VariableNodePath
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../ScreenGoTo_FromPLC"
+  - Name: VariableRangeTransitionEventHandler1
+    Type: EventHandler
+    Children:
+    - Name: ListenEventType
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableRangeTransitionEvent"
+    - Name: MethodsToCall
+      Type: BaseObjectType
+      Children:
+      - Name: MethodContainer3
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RecipeEditVariables/RecipeInEdit@NodeId"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Boolean
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: ScalarOrOneDimension
+      - Name: MethodContainer1
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RecipeEditVariables/NewRecipe"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Boolean
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: ScalarOrOneDimension
+      - Name: MethodContainer5
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RecipeEditVariables/RecipeEditBanner"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Boolean
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: ScalarOrOneDimension
+      - Name: MethodContainer2
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RecipeEditControllers/Sequence/RecipeController"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "ApplyFromDB"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: RecipeName
+            Type: BaseDataVariableType
+            DataType: String
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../../../RecipeEdit/RecipeEditComboBox/SelectedRecipeName"
+          - Name: ErrorPolicy
+            Type: BaseDataVariableType
+            DataType: CopyErrorPolicy
+      - Name: MethodContainer10
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RecipeEditControllers/Basic/RecipeController"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "ApplyFromDB"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: RecipeName
+            Type: BaseDataVariableType
+            DataType: String
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../../../RecipeEdit/RecipeEditComboBox/SelectedRecipeName"
+          - Name: ErrorPolicy
+            Type: BaseDataVariableType
+            DataType: CopyErrorPolicy
+      - Name: MethodContainer7
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RecipeEditControllers/SequenceF/RecipeController"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "ApplyFromDB"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: RecipeName
+            Type: BaseDataVariableType
+            DataType: String
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../../../RecipeEdit/RecipeEditComboBox/SelectedRecipeName"
+          - Name: ErrorPolicy
+            Type: BaseDataVariableType
+            DataType: CopyErrorPolicy
+      - Name: MethodContainer4
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Write_CurPatSeq"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: ScalarOrOneDimension
+      - Name: MethodContainer6
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Write_CurPatSeq"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Boolean
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: ScalarOrOneDimension
+      - Name: MethodContainer8
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Write_CurPatSeqF"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: ScalarOrOneDimension
+      - Name: MethodContainer9
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Write_CurPatSeqF"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Boolean
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: ScalarOrOneDimension
+      - Name: MethodContainer11
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEditCancel"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: ScalarOrOneDimension
+      - Name: MethodContainer14
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RecipeEditControllers/Basic/RecipeController"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "SelectFromDB"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: RecipeName
+            Type: BaseDataVariableType
+            DataType: String
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeCur/1/RecipeName"
+          - Name: ErrorPolicy
+            Type: BaseDataVariableType
+            DataType: CopyErrorPolicy
+      - Name: MethodContainer12
+        Type: BaseObjectType
+        Children:
+        - Name: ns=7;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Commands/VariableCommands"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: ns=7;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Description: {"NamespaceIndex":7,"TextId":"SetVariableToModifyDescription"}
+            Value: "/Objects/RPC_SEQTEST/Model/Screens/CO/COEditVariables/COInEdit"
+          - Name: Value
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Description: {"NamespaceIndex":7,"TextId":"SetValueDescription"}
+          - Name: ArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Description: {"NamespaceIndex":7,"TextId":"SetArrayIndexDescription"}
+            ValueRank: ScalarOrOneDimension
+    - Name: EventArguments
+      Type: VariableRangeTransitionEvent
+      Children:
+      - Name: VariableNodeId
+        Type: BaseVariableType
+        DataType: NodeId
+      - Name: NewValue
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: OldValue
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: EventId
+        Type: PropertyType
+        DataType: ByteString
+      - Name: EventType
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceNode
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceName
+        Type: PropertyType
+        DataType: String
+      - Name: Time
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: ReceiveTime
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: Message
+        Type: PropertyType
+        DataType: LocalizedText
+      - Name: Severity
+        Type: PropertyType
+        DataType: UInt16
+- File: Development/Development.yaml

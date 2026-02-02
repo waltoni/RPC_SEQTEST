@@ -1,0 +1,10 @@
+Name: Home_Machine
+Type: FolderType
+Children:
+- Name: MenuOpen
+  Id: g=1524b400ed746bf88eb61891dd8856cc
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: MachineResetModal
+  Type: BaseDataVariableType
+  DataType: Boolean

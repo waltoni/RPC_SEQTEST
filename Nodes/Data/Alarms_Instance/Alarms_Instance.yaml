@@ -1,0 +1,166 @@
+Name: Alarms_Instance
+Id: g=3293e7cd8de0bb06cc725e017a984470
+Type: AlarmsCategoryFolder
+Children:
+- File: MaintenanceTasks/MaintenanceTasks.yaml
+- Name: TemplateAlarm
+  Id: g=131ed0fc18224177dba177e69de92ec4
+  Supertype: OffNormalAlarmController
+  Children:
+  - Class: Reference
+    Target: ns=27;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=8e7c8194794c27d1031f7b5861e3bab9
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=6fbb5ecaf535350139419c97e757e324
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=3f106f91f9c5ea3d8d8538edfdbf21da
+      Type: DynamicLink
+      DataType: NodePath
+      Children:
+      - Name: DynamicLinkFormatter
+        Id: g=4e05e63e865f9369ff1a48721c45ab8a
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Id: g=14fe601a473ecfc164d748b5593dcef7
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Alarm/{2}[{3}].{1}"}
+        - Name: ns=7;Source1
+          Id: g=805b3fbe24e61951e30eaafe2ffd12de
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=f9bbe286ce6bb80217819b35db23f994
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Index"
+        - Name: ns=7;Source2
+          Id: g=7ab614f6d5b524d92980f9249c50c8b1
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=be2dafa786ecc05e62b5a1bd46555e63
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Id: g=9ca9707a48a53e7ef8238a3fd4567fde
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "if ({0} == \"Alarm\", \"AlarmMajorFaultBit\", \"MessageTriggerBit\")"
+            - Name: ns=7;Source0
+              Id: g=678b19450115f69348a893e142188b19
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=e99c36636d07a61a0ac84598b578e327
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Type"
+        - Name: ns=7;Source3
+          Id: g=f726595dc68c68cb0f2e3b24ecce7a52
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=7fd9a6419a4d8a546acb5bc0602de707
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../ArrayIndex"
+      - Name: Mode
+        Id: g=ed147108e9a0211252accfdc2d222f16
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: LastEvent
+    Id: g=b61516d7c128233ed7dbb2825bbfea47
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Type: GeneratesEvent
+    Target: g=3ed988eb5e016108ce3f3b59108bea50
+  - Name: Severity
+    Id: g=c8691b09868ab0ba234a1c5f4483fd98
+    Type: BaseDataVariableType
+    DataType: UInt16
+    ModellingRule: Optional
+    Value: 750
+  - Class: Reference
+    Target: ns=27;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=135
+    Direction: Forward
+  - Name: Index
+    Id: g=3091bc1698b2034dc094552c2c78d0d7
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Type
+    Id: g=ccc50e98d2bb58fb9cc2123207eaf186
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Alarm"
+  - Name: AutoAcknowledge
+    Id: g=c375dd1fec78df43c7cb2aac049201c9
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: AutoConfirm
+    Id: g=69b8f626c0c0f92b21eae4583979d67c
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: ArrayIndex
+    Id: g=452d5d8987f68450b226f38dc7927132
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Class: Reference
+    Target: ns=27;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=27;i=154
+    Direction: Forward
+- File: MajorAlarms/MajorAlarms.yaml

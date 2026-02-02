@@ -1,0 +1,43 @@
+Name: Glue
+Type: FolderType
+Children:
+- Name: Config_Glue
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: GlueSetup
+  Type: BaseObjectType
+  Children:
+  - Name: GlueSetupInEdit
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: GlueSetupSaveRequest
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: GlueSetupInEditTransitioned
+    Type: VariableTransitionEventDispatcher
+    Children:
+    - Name: Value
+      Type: BaseVariableType
+      DataType: Double
+      Value: 1.0
+    - Name: Transition
+      Type: BaseVariableType
+      DataType: VariableTransition
+    - Name: VariableNodePath
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../GlueSetupInEdit"
+  - Name: GlueSetupSaveRequestTransitioned
+    Type: VariableTransitionEventDispatcher
+    Children:
+    - Name: Value
+      Type: BaseVariableType
+      DataType: Double
+      Value: 1.0
+    - Name: Transition
+      Type: BaseVariableType
+      DataType: VariableTransition
+    - Name: VariableNodePath
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../GlueSetupSaveRequest"

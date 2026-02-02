@@ -1,0 +1,91 @@
+Name: CO
+Type: FolderType
+Children:
+- Name: ChangeOverChecklistToggle
+  Id: g=6cabbedbce15c49f7cb431d5f19c021e
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: IsFilterCheckOn
+  Id: g=e8aee4178e4100d727021c9d6fa780a4
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: COEditVariables
+  Type: BaseObjectType
+  Children:
+  - Name: COInEdit
+    Id: g=e87be2b0eec8c39f6cfadb776d05429a
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: COEditSaveRequest
+    Id: g=d0fde88f182ea515f1cb62598f434e5f
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: CoInEditTransitioned
+    Id: g=f2e31d24af4369aedb780b6f460d26c6
+    Type: VariableTransitionEventDispatcher
+    Children:
+    - Name: Value
+      Type: BaseVariableType
+      DataType: Double
+      Value: 1.0
+    - Name: Transition
+      Type: BaseVariableType
+      DataType: VariableTransition
+    - Name: VariableNodePath
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../COInEdit"
+  - Name: CoEditSaveRequestTransitioned
+    Id: g=69ae97ebb7cda47b351272369a160dce
+    Type: VariableTransitionEventDispatcher
+    Children:
+    - Name: Value
+      Type: BaseVariableType
+      DataType: Double
+      Value: 1.0
+    - Name: Transition
+      Type: BaseVariableType
+      DataType: VariableTransition
+    - Name: VariableNodePath
+      Type: BaseVariableType
+      DataType: NodePath
+      Value: "../COEditSaveRequest"
+- Name: CheckConfiguration
+  Type: BaseObjectType
+  Children:
+  - Name: Glue
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Tape
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: RightMachine
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: LeftMachine
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Major Flap Opener
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Bottom Tape Sensing
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Overpack Sensing
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Full Overlap Flap
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Metering Case Clamp
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Tape Assist
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: IO Link
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: MultipleLanguageOption
+    Type: BaseDataVariableType
+    DataType: Boolean

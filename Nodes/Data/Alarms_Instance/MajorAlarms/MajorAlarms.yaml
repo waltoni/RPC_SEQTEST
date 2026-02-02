@@ -1,0 +1,7 @@
+Name: MajorAlarms
+Id: g=417d16b402d45003f81fb358f5a3f685
+Type: FolderType
+Children:
+- File: Array0/Array0.yaml
+- File: Array1/Array1.yaml
+- File: Array2/Array2.yaml

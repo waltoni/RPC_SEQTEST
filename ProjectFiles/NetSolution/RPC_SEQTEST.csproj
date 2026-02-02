@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <NoWarn>1701;1702</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <NoWarn>1701;1702</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <BaseOutputPath>E:\Temp</BaseOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FubarDev.FtpServer" Version="3.1.2"/>
+    <PackageReference Include="FubarDev.FtpServer.FileSystem.DotNet" Version="3.1.2"/>
+    <PackageReference Include="itext7" Version="8.0.5"/>
+    <PackageReference Include="itext7.bouncy-castle-adapter" Version="8.0.5"/>
+    <PackageReference Include="itext7.bouncy-castle-fips-adapter" Version="8.0.5"/>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2"/>
+    <PackageReference Include="SharpGLTF.Core" Version="1.0.6"/>
+    <PackageReference Include="SharpGLTF.Toolkit" Version="1.0.6"/>
+  </ItemGroup>
+  <Import Project="RPC_SEQTEST.references"/>
+</Project>

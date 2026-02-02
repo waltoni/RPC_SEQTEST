@@ -1,0 +1,10 @@
+Name: Development
+Type: FolderType
+Children:
+- Name: DevelopmentVariables
+  Type: BaseObjectType
+  Children:
+  - Name: InitialConfigInEdit
+    Id: g=1865fa0caddb2c1a6e4c98d474673546
+    Type: BaseDataVariableType
+    DataType: Boolean

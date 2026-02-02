@@ -1,0 +1,707 @@
+Name: Recipes
+Type: RecipesCategoryFolder
+Children:
+- Name: RPCSchema
+  Id: g=9727fe55b41c3716e67cca0b7d16173c
+  Type: RecipeSchema
+  Children:
+  - Name: Root
+    Type: BaseObjectType
+    Children:
+    - Name: PatType
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: Weight
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: OverhangL
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: OverhangW
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: NumLyrs
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: NumPerLyr
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: FlipType
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: LyrFlip
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: LyrSheet
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: PatLen
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: PatWid
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: initConfig
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Compress
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: PickSpeed
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: DropSpeed
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: PickDelay
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: DropDelay
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: CaseDirAtPick
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: SeqValid
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: ChangeOverSettings
+      Type: BaseDataVariableType
+      DataType: Double
+      ValueRank: OneDimension
+      ArrayDimensions: [32]
+    - Name: NumToolZones
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: ProdL
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: ProdW
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: ProdH
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: PalL
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: PalW
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: PalH
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: LoadL
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: LoadW
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: LoadH
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: UnitX
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitY
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitZ
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitR
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitFX
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitFY
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitFZ
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitFR
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: ChangeOverDefaults
+      Type: BaseDataVariableType
+      DataType: Double
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: AdvancedSetup
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: LabelOrient
+      Type: BaseDataVariableType
+      DataType: Int32
+  - Class: Reference
+    Target: ns=25;i=27
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=33
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=31
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=35
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=37
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=76
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=53
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=62
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=55
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=58
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=60
+    Direction: Forward
+  - Name: TargetNode
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RPCRecipeParameters"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: Store
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/RPC_SEQTEST/Data/DataStores/RPCRecipeDB"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Store"
+  - Name: TableName
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: EditModel
+    Id: g=0a193859048a680259d9d9eed0050c1b
+    Type: BaseObjectType
+    Children:
+    - Name: PatType
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: Weight
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: OverhangL
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: OverhangW
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: NumLyrs
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: NumPerLyr
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: FlipType
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: LyrFlip
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: LyrSheet
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: PatLen
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: PatWid
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: initConfig
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Compress
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: PickSpeed
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: DropSpeed
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: PickDelay
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: DropDelay
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: CaseDirAtPick
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: SeqValid
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: ChangeOverSettings
+      Type: BaseDataVariableType
+      DataType: Double
+      ValueRank: OneDimension
+      ArrayDimensions: [32]
+    - Name: NumToolZones
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: ProdL
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: ProdW
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: ProdH
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: PalL
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: PalW
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: PalH
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: LoadL
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: LoadW
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: LoadH
+      Type: BaseDataVariableType
+      DataType: Float
+    - Name: UnitX
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitY
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitZ
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitR
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitFX
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitFY
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitFZ
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: UnitFR
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: ChangeOverDefaults
+      Type: BaseDataVariableType
+      DataType: Double
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: AdvancedSetup
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: LabelOrient
+      Type: BaseDataVariableType
+      DataType: Int32
+- Name: RPCSchemaSeq
+  Id: g=82ec411bc290d2415b3b380d952cb6dd
+  Type: RecipeSchema
+  Children:
+  - Name: Root
+    Type: BaseObjectType
+    Children:
+    - Name: Seq_UnitNum
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_Pick
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_Drop
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_Rot180
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_AprL
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_AprW
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_AprH
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_RetZ
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_UTool
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_NumInPick
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_NumInDrop
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+  - Class: Reference
+    Target: ns=25;i=27
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=33
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=31
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=35
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=37
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=76
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=53
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=62
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=55
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=58
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=60
+    Direction: Forward
+  - Name: TargetNode
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RPCRecipeSequence"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: Store
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/RPC_SEQTEST/Data/DataStores/RPCRecipeDB"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Store"
+  - Name: TableName
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: EditModel
+    Id: g=4b674fe3cf9a776059f12e725a24309c
+    Type: BaseObjectType
+    Children:
+    - Name: Seq_UnitNum
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_Pick
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_Drop
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_Rot180
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_AprL
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_AprW
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_AprH
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_RetZ
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_UTool
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_NumInPick
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: Seq_NumInDrop
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+- Name: RPCSchemaSeqF
+  Id: g=297806fb62b9904e663b9eb6eede35af
+  Type: RecipeSchema
+  Children:
+  - Name: Root
+    Type: BaseObjectType
+    Children:
+    - Name: SeqF_UnitNum
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_Pick
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_Drop
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_Rot180
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_AprL
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_AprW
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_AprH
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_RetZ
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_UTool
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_NumInPick
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_NumInDrop
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+  - Class: Reference
+    Target: ns=25;i=27
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=33
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=31
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=35
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=37
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=76
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=53
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=62
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=55
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=58
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=60
+    Direction: Forward
+  - Name: TargetNode
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RPCRecipeSequenceF"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: Store
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/RPC_SEQTEST/Data/DataStores/RPCRecipeDB"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Store"
+  - Name: EditModel
+    Id: g=181fc751a681111e2cfbfa9a82c082e8
+    Type: BaseObjectType
+    Children:
+    - Name: SeqF_UnitNum
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_Pick
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_Drop
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_Rot180
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_AprL
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_AprW
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_AprH
+      Type: BaseDataVariableType
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_RetZ
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_UTool
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_NumInPick
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]
+    - Name: SeqF_NumInDrop
+      Type: BaseDataVariableType
+      DataType: Int16
+      ValueRank: OneDimension
+      ArrayDimensions: [64]

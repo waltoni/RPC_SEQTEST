@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" id="Overall" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 50 50">
+  <g id="Box1">
+    <!-- Use PalletX and PalletY placeholders for dynamic values -->
+    <polygon style="fill:#CB8252;" points="{PalletX1},{PalletY1} {PalletX2},{PalletY2} {PalletX3},{PalletY3} {PalletX4},{PalletY4}"/>
+  </g>
+</svg>
