@@ -2005,12 +2005,11 @@ Children:
           - Name: Visible
             Type: BaseDataVariableType
             DataType: Boolean
+          - Name: Enabled
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ModellingRule: Optional
             Value: true
-            Children:
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RecipeEditVariables/AdvancedSetup"
       - Name: CurrentPanel
         Type: NodePointer
         DataType: NodeId
@@ -2328,7 +2327,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 40.0
+      Value: 50.0
     - Name: BackgroundColor
       Type: BaseDataVariableType
       DataType: Color
