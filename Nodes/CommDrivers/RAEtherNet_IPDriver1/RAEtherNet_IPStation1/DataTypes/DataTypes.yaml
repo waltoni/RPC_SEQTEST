@@ -3705,41 +3705,6 @@ Children:
     DisplayName: {"LocaleId":"","Text":"Default Binary"}
     ReferenceType: HasEncoding
 - Class: DataType
-  Name: UDT_PackML_Ingredient
-  Id: g=aa9708e1b017f11358aae5e8cfc3dc75
-  Supertype: Structure
-  StructDefinition: 
-   {
-    "Name": "UDT_PackML_Ingredient",
-    "DataType": {
-     "IdType": 2,
-     "Id": "aa9708e1b017f11358aae5e8cfc3dc75",
-     "Namespace": 36
-    },
-    "Fields": [{
-      "Name": "IngredientID",
-      "DataType": {
-       "Id": 6
-      }
-     },{
-      "Name": "Parameter",
-      "DataType": {
-       "IdType": 2,
-       "Id": "36648a863f46a3929936209fbd086227",
-       "Namespace": 36
-      },
-      "ValueRank": "OneDimension",
-      "ArrayDimensions": [5]
-     }]
-   }
-  DisplayName: {"LocaleId":"","Text":"UDT_PackML_Ingredient"}
-  Children:
-  - Name: ns=0;Default Binary
-    Type: DataTypeEncodingType
-    ModellingRule: None
-    DisplayName: {"LocaleId":"","Text":"Default Binary"}
-    ReferenceType: HasEncoding
-- Class: DataType
   Name: udtLogData
   Id: g=6b0521777b2abfe0fa904a203fe099d6
   Supertype: Structure
@@ -6668,23 +6633,37 @@ Children:
     ReferenceType: HasEncoding
 - Class: DataType
   Name: udtDropData
-  Id: g=de456c514857fa6ef1d72a7b2efbb618
+  Id: g=d577ffd85ee19b328f0438493819df47
   Supertype: Structure
   StructDefinition: 
    {
     "Name": "udtDropData",
     "DataType": {
      "IdType": 2,
-     "Id": "de456c514857fa6ef1d72a7b2efbb618",
+     "Id": "d577ffd85ee19b328f0438493819df47",
      "Namespace": 36
     },
     "Fields": [{
-      "Name": "Drop",
+      "Name": "X",
       "DataType": {
-       "IdType": 2,
-       "Id": "15ee35e1f89c18c79a284b2216958c73",
-       "Namespace": 36
-      }
+       "Id": 10
+      },
+      "ValueRank": "OneDimension",
+      "ArrayDimensions": [64]
+     },{
+      "Name": "Y",
+      "DataType": {
+       "Id": 10
+      },
+      "ValueRank": "OneDimension",
+      "ArrayDimensions": [64]
+     },{
+      "Name": "R",
+      "DataType": {
+       "Id": 1
+      },
+      "ValueRank": "OneDimension",
+      "ArrayDimensions": [64]
      }]
    }
   DisplayName: {"LocaleId":"","Text":"udtDropData"}
@@ -7308,6 +7287,41 @@ Children:
      }]
    }
   DisplayName: {"LocaleId":"","Text":"udtAlarm"}
+  Children:
+  - Name: ns=0;Default Binary
+    Type: DataTypeEncodingType
+    ModellingRule: None
+    DisplayName: {"LocaleId":"","Text":"Default Binary"}
+    ReferenceType: HasEncoding
+- Class: DataType
+  Name: UDT_PackML_Ingredient
+  Id: g=aa9708e1b017f11358aae5e8cfc3dc75
+  Supertype: Structure
+  StructDefinition: 
+   {
+    "Name": "UDT_PackML_Ingredient",
+    "DataType": {
+     "IdType": 2,
+     "Id": "aa9708e1b017f11358aae5e8cfc3dc75",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "IngredientID",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "Parameter",
+      "DataType": {
+       "IdType": 2,
+       "Id": "36648a863f46a3929936209fbd086227",
+       "Namespace": 36
+      },
+      "ValueRank": "OneDimension",
+      "ArrayDimensions": [5]
+     }]
+   }
+  DisplayName: {"LocaleId":"","Text":"UDT_PackML_Ingredient"}
   Children:
   - Name: ns=0;Default Binary
     Type: DataTypeEncodingType

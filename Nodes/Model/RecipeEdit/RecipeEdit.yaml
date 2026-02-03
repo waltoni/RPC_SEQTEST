@@ -1650,6 +1650,16 @@ Children:
     DataType: Boolean
     ValueRank: OneDimension
     ArrayDimensions: [64]
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Program&:Patterns/curPatUnit/R"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
   - Name: WidthArray
     Id: g=63879c475a484b7131eb644cedaadd69
     Type: BaseDataVariableType
@@ -1676,12 +1686,32 @@ Children:
     DataType: Size
     ValueRank: OneDimension
     ArrayDimensions: [64]
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Program&:Patterns/curPatUnit/Y"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
   - Name: TopMargin
     Id: g=ad96e26c309335120b43395e825fc458
     Type: BaseDataVariableType
     DataType: Size
     ValueRank: OneDimension
     ArrayDimensions: [64]
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Program&:Patterns/curPatUnit/X"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
   - Name: RunSnap
     Id: g=4eeee5c35503e358288562209bcaae3a
     Type: BaseDataVariableType
@@ -1967,6 +1997,16 @@ Children:
   - Name: NumCasesCustom
     Type: BaseDataVariableType
     DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/numPerLyr"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
   - Name: CaseSelected
     Id: g=8b62bae41577c41fd4c5424f05b69b7c
     Type: BaseDataVariableType
@@ -2039,6 +2079,16 @@ Children:
     DataType: Boolean
     ValueRank: OneDimension
     ArrayDimensions: [64]
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Program&:Patterns/curPatUnitF/R"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
   - Name: WidthArray
     Id: g=51dc0a47137df7765c8b61921a79fbf8
     Type: BaseDataVariableType
@@ -2065,12 +2115,32 @@ Children:
     DataType: Size
     ValueRank: OneDimension
     ArrayDimensions: [64]
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Program&:Patterns/curPatUnitF/Y"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
   - Name: TopMargin
     Id: g=c32e3cce1d1d22d6b7e5c2317eb59dda
     Type: BaseDataVariableType
     DataType: Size
     ValueRank: OneDimension
     ArrayDimensions: [64]
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Program&:Patterns/curPatUnitF/X"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
   - Name: RunSnap
     Id: g=f360409432d5d7136f08e525c18c9a67
     Type: BaseDataVariableType

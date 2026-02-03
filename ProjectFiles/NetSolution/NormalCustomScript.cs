@@ -64,6 +64,9 @@ public class NormalCustomScript : BaseNetLogic
         if (targetCount < MinCount || targetCount > MaxCount)
             return;
 
+        // Initialize WidthArray and HeightArray when display loads with NumCasesCustom != 0
+        InitializeWidthHeightArrays(targetCount);
+
         var baseBox1 = FindNodeRecursive(LogicObject, BaseBoxTemplateName) as IUAObject;
         var caseLocations1 = FindNodeRecursive(LogicObject, CaseLocationsTemplateName) as IUAObject;
 
@@ -475,11 +478,36 @@ public class NormalCustomScript : BaseNetLogic
         return Project.Current?.GetVariable($"{CustomPatternPath}/NumCasesCustom");
     }
 
+    private void InitializeWidthHeightArrays(int targetCount)
+    {
+        try
+        {
+            var cp = Project.Current?.Get(CustomPatternPath);
+            if (cp == null || targetCount < 1) return;
+
+            float widthVal = ToFloat(cp.GetVariable("Width")?.Value);
+            float heightVal = ToFloat(cp.GetVariable("Height")?.Value);
+
+            for (int n = 1; n <= targetCount; n++)
+            {
+                bool rot90 = GetArrayBool(cp.GetVariable("Rot90"), n);
+                float w = rot90 ? heightVal : widthVal;
+                float h = rot90 ? widthVal : heightVal;
+                SetArrayElement(cp.GetVariable("WidthArray"), n, w);
+                SetArrayElement(cp.GetVariable("HeightArray"), n, h);
+            }
+        }
+        catch (Exception ex)
+        {
+            Log.Warning(nameof(NormalCustomScript), $"InitializeWidthHeightArrays failed: {ex.Message}");
+        }
+    }
+
     private void InitializeArraysForIndex(int n)
     {
         try
         {
-            var customPattern = Project.Current?.Get($"{CustomPatternPath}");
+            var customPattern = Project.Current?.Get(CustomPatternPath);
             if (customPattern == null)
                 return;
 

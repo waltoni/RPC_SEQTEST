@@ -94,6 +94,15 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Value: "FNumInPickTemp"
+- Name: Write_CurPatUnitCustomF
+  Id: g=007d3ccc2b3275cc6ec3a847f25147fb
+  Type: RAEtherNetIPTag
+  DataType: Boolean
+  Children:
+  - Name: SymbolName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Write_CurPatUnitCustomF"
 - Name: Cell
   Type: udtWorkcell
   DataType: udtWorkcell
@@ -44637,6 +44646,7 @@ Children:
       DataType: String
       Value: "RecipeEdit.numLyrs"
   - Name: numPerLyr
+    Id: g=52bdea704af5e1f904e76357b3b72d99
     Type: RAEtherNetIPTag
     DataType: Int16
     Children:
@@ -69274,6 +69284,15 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Value: "Write_CurPatUnit"
+- Name: Write_CurPatUnitCustom
+  Id: g=937b22400e82809a4657446bab081715
+  Type: RAEtherNetIPTag
+  DataType: Boolean
+  Children:
+  - Name: SymbolName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Write_CurPatUnitCustom"
 - Name: Write_CurPatUnitF
   Type: RAEtherNetIPTag
   DataType: Boolean
