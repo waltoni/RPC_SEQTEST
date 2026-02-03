@@ -8512,12 +8512,12 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 300.0
+        Value: 250.0
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 5.0
+        Value: 15.0
       - Name: VerticalGap
         Type: BaseDataVariableType
         DataType: Size
@@ -8538,7 +8538,7 @@ Children:
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0}=1"
+              Value: "{0}==1"
             - Name: ns=7;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -8562,12 +8562,16 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 30.0
+          Value: 40.0
         - Name: IndicatorPosition
           Type: BaseDataVariableType
           DataType: HorizontalPositionEnum
           ModellingRule: Optional
           Value: 1
+        - Name: Enabled
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
         - Name: ModifiedValueHandler1
           Type: EventHandler
           Children:
@@ -8600,17 +8604,14 @@ Children:
                 - Name: VariableToModify
                   Type: BaseDataVariableType
                   DataType: VariablePointer
-                  Description: {"NamespaceIndex":7,"TextId":"SetVariableToModifyDescription"}
                   Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/PatType"
                 - Name: Value
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Description: {"NamespaceIndex":7,"TextId":"SetValueDescription"}
                   Value: 1
                 - Name: ArrayIndex
                   Type: BaseDataVariableType
                   DataType: UInt32
-                  Description: {"NamespaceIndex":7,"TextId":"SetArrayIndexDescription"}
                   ValueRank: ScalarOrOneDimension
           - Name: EventArguments
             Type: UserValueChanged
@@ -8657,7 +8658,7 @@ Children:
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0}=2"
+              Value: "{0}==2"
             - Name: ns=7;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -8681,7 +8682,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 30.0
+          Value: 40.0
         - Name: IndicatorPosition
           Type: BaseDataVariableType
           DataType: HorizontalPositionEnum
@@ -8719,17 +8720,14 @@ Children:
                 - Name: VariableToModify
                   Type: BaseDataVariableType
                   DataType: VariablePointer
-                  Description: {"NamespaceIndex":7,"TextId":"SetVariableToModifyDescription"}
                   Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/PatType"
                 - Name: Value
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Description: {"NamespaceIndex":7,"TextId":"SetValueDescription"}
                   Value: 2
                 - Name: ArrayIndex
                   Type: BaseDataVariableType
                   DataType: UInt32
-                  Description: {"NamespaceIndex":7,"TextId":"SetArrayIndexDescription"}
                   ValueRank: ScalarOrOneDimension
           - Name: EventArguments
             Type: UserValueChanged
@@ -8761,6 +8759,10 @@ Children:
             - Name: Severity
               Type: PropertyType
               DataType: UInt16
+        - Name: Enabled
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
       - Name: OptionButton3
         Type: RadioButton
         Children:
@@ -8776,7 +8778,7 @@ Children:
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0}=3"
+              Value: "{0}==3"
             - Name: ns=7;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -8800,7 +8802,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 30.0
+          Value: 40.0
         - Name: IndicatorPosition
           Type: BaseDataVariableType
           DataType: HorizontalPositionEnum
@@ -8838,17 +8840,14 @@ Children:
                 - Name: VariableToModify
                   Type: BaseDataVariableType
                   DataType: VariablePointer
-                  Description: {"NamespaceIndex":7,"TextId":"SetVariableToModifyDescription"}
                   Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/PatType"
                 - Name: Value
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Description: {"NamespaceIndex":7,"TextId":"SetValueDescription"}
                   Value: 3
                 - Name: ArrayIndex
                   Type: BaseDataVariableType
                   DataType: UInt32
-                  Description: {"NamespaceIndex":7,"TextId":"SetArrayIndexDescription"}
                   ValueRank: ScalarOrOneDimension
           - Name: EventArguments
             Type: UserValueChanged
@@ -8880,6 +8879,10 @@ Children:
             - Name: Severity
               Type: PropertyType
               DataType: UInt16
+        - Name: Enabled
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
       - Name: OptionButton4
         Type: RadioButton
         Children:
@@ -8895,7 +8898,7 @@ Children:
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0}=4"
+              Value: "{0}==4"
             - Name: ns=7;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -8919,7 +8922,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 30.0
+          Value: 40.0
         - Name: IndicatorPosition
           Type: BaseDataVariableType
           DataType: HorizontalPositionEnum
@@ -8957,17 +8960,14 @@ Children:
                 - Name: VariableToModify
                   Type: BaseDataVariableType
                   DataType: VariablePointer
-                  Description: {"NamespaceIndex":7,"TextId":"SetVariableToModifyDescription"}
                   Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/PatType"
                 - Name: Value
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Description: {"NamespaceIndex":7,"TextId":"SetValueDescription"}
                   Value: 4
                 - Name: ArrayIndex
                   Type: BaseDataVariableType
                   DataType: UInt32
-                  Description: {"NamespaceIndex":7,"TextId":"SetArrayIndexDescription"}
                   ValueRank: ScalarOrOneDimension
           - Name: EventArguments
             Type: UserValueChanged
@@ -8999,6 +8999,10 @@ Children:
             - Name: Severity
               Type: PropertyType
               DataType: UInt16
+        - Name: Enabled
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
       - Name: OptionButton5
         Type: RadioButton
         Children:
@@ -9014,7 +9018,7 @@ Children:
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0}=5"
+              Value: "{0}==5"
             - Name: ns=7;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -9038,7 +9042,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 30.0
+          Value: 40.0
         - Name: IndicatorPosition
           Type: BaseDataVariableType
           DataType: HorizontalPositionEnum
@@ -9076,17 +9080,14 @@ Children:
                 - Name: VariableToModify
                   Type: BaseDataVariableType
                   DataType: VariablePointer
-                  Description: {"NamespaceIndex":7,"TextId":"SetVariableToModifyDescription"}
                   Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/PatType"
                 - Name: Value
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Description: {"NamespaceIndex":7,"TextId":"SetValueDescription"}
                   Value: 5
                 - Name: ArrayIndex
                   Type: BaseDataVariableType
                   DataType: UInt32
-                  Description: {"NamespaceIndex":7,"TextId":"SetArrayIndexDescription"}
                   ValueRank: ScalarOrOneDimension
           - Name: EventArguments
             Type: UserValueChanged
@@ -9118,6 +9119,10 @@ Children:
             - Name: Severity
               Type: PropertyType
               DataType: UInt16
+        - Name: Enabled
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
       - Name: OptionButton6
         Type: RadioButton
         Children:
@@ -9133,7 +9138,7 @@ Children:
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0}=6"
+              Value: "{0}==10"
             - Name: ns=7;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -9157,7 +9162,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 30.0
+          Value: 40.0
         - Name: IndicatorPosition
           Type: BaseDataVariableType
           DataType: HorizontalPositionEnum
@@ -9195,17 +9200,14 @@ Children:
                 - Name: VariableToModify
                   Type: BaseDataVariableType
                   DataType: VariablePointer
-                  Description: {"NamespaceIndex":7,"TextId":"SetVariableToModifyDescription"}
                   Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/PatType"
                 - Name: Value
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Description: {"NamespaceIndex":7,"TextId":"SetValueDescription"}
                   Value: 10
                 - Name: ArrayIndex
                   Type: BaseDataVariableType
                   DataType: UInt32
-                  Description: {"NamespaceIndex":7,"TextId":"SetArrayIndexDescription"}
                   ValueRank: ScalarOrOneDimension
             - Name: MethodContainer2
               Type: BaseObjectType
@@ -9278,6 +9280,143 @@ Children:
             - Name: Severity
               Type: PropertyType
               DataType: UInt16
+        - Name: Enabled
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+      - Name: Button1
+        Type: Button
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"<----"}
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 130.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 40.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: -50.0
+        - Name: BackgroundColor
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+        - Name: MouseClickEventHandler1
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer2
+              Type: BaseObjectType
+              Children:
+              - Name: ns=7;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/UICommands"
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=7;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "OpenDialog"
+              - Name: InputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: Dialog
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Value: "/Objects/RPC_SEQTEST/UI/PopUps/CustomPatternNormal"
+                - Name: AliasNode
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  ValueRank: ScalarOrOneDimension
+                - Name: ParentItem
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../..@NodeId"
+              - Name: OutputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: DialogNodeId
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+          - Name: EventArguments
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Type: PropertyType
+              DataType: ByteString
+            - Name: EventType
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceNode
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceName
+              Type: PropertyType
+              DataType: String
+            - Name: Time
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: ReceiveTime
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: Message
+              Type: PropertyType
+              DataType: LocalizedText
+            - Name: Severity
+              Type: PropertyType
+              DataType: UInt16
+        - Name: Visible
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: ExpressionEvaluator1
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "{0}==10"
+            - Name: ns=7;Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/PatType"
+        - Name: TextPosition
+          Type: BaseDataVariableType
+          DataType: Position
+          ModellingRule: Optional
+          Value: 3
   - Name: PalletVisualLoader2
     Type: PanelLoader
     Children:
@@ -9316,7 +9455,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 130.0
+      Value: 150.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
@@ -21340,7 +21479,7 @@ Children:
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0}=1"
+              Value: "{0}==1"
             - Name: ns=7;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -21364,7 +21503,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 30.0
+          Value: 40.0
         - Name: IndicatorPosition
           Type: BaseDataVariableType
           DataType: HorizontalPositionEnum
@@ -21459,7 +21598,7 @@ Children:
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0}=2"
+              Value: "{0}==2"
             - Name: ns=7;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -21483,7 +21622,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 30.0
+          Value: 40.0
         - Name: IndicatorPosition
           Type: BaseDataVariableType
           DataType: HorizontalPositionEnum
@@ -21578,7 +21717,7 @@ Children:
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0}=3"
+              Value: "{0}==3"
             - Name: ns=7;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -21602,7 +21741,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 30.0
+          Value: 40.0
         - Name: IndicatorPosition
           Type: BaseDataVariableType
           DataType: HorizontalPositionEnum
@@ -21697,7 +21836,7 @@ Children:
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0}=4"
+              Value: "{0}==4"
             - Name: ns=7;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -21721,7 +21860,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 30.0
+          Value: 40.0
         - Name: IndicatorPosition
           Type: BaseDataVariableType
           DataType: HorizontalPositionEnum
@@ -21816,7 +21955,7 @@ Children:
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
-              Value: "{0}=5"
+              Value: "{0}==5"
             - Name: ns=7;Source0
               Type: BaseDataVariableType
               DataType: BaseDataType
@@ -21840,7 +21979,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 30.0
+          Value: 40.0
         - Name: IndicatorPosition
           Type: BaseDataVariableType
           DataType: HorizontalPositionEnum
@@ -21971,6 +22110,139 @@ Children:
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 2
+      - Name: Button1
+        Type: Button
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"<----"}
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 130.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 40.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: -50.0
+        - Name: BackgroundColor
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+        - Name: MouseClickEventHandler1
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer2
+              Type: BaseObjectType
+              Children:
+              - Name: ns=7;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/UICommands"
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=7;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "OpenDialog"
+              - Name: InputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: Dialog
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Value: "/Objects/RPC_SEQTEST/UI/PopUps/CustomPatternFlipped"
+                - Name: AliasNode
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  ValueRank: ScalarOrOneDimension
+                - Name: ParentItem
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../..@NodeId"
+              - Name: OutputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: DialogNodeId
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+          - Name: EventArguments
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Type: PropertyType
+              DataType: ByteString
+            - Name: EventType
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceNode
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceName
+              Type: PropertyType
+              DataType: String
+            - Name: Time
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: ReceiveTime
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: Message
+              Type: PropertyType
+              DataType: LocalizedText
+            - Name: Severity
+              Type: PropertyType
+              DataType: UInt16
+        - Name: Visible
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: ExpressionEvaluator1
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "{0}==5"
+            - Name: ns=7;Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/FlipType"
+        - Name: TextPosition
+          Type: BaseDataVariableType
+          DataType: Position
+          ModellingRule: Optional
+          Value: 3
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
@@ -21997,7 +22269,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 103.0
+      Value: 150.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
@@ -22496,7 +22768,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 30.0
+      Value: 35.0
     - Name: HorizontalLayout1
       Type: RowLayout
       Children:

@@ -2402,6 +2402,31 @@ Children:
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternNormal/CaseSelected"
+            - Name: MethodContainer4
+              Type: BaseObjectType
+              Children:
+              - Name: ns=7;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../Add_Sub_Layout/NormalCustomScript@NodeId"
+                  Children:
+                  - Name: Mode
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ns=7;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Snap"
           - Name: EventArguments
             Type: MouseClickEvent
             Children:
@@ -4995,6 +5020,31 @@ Children:
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/CustomPatternFlipped/CaseSelected"
+            - Name: MethodContainer4
+              Type: BaseObjectType
+              Children:
+              - Name: ns=7;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../Add_Sub_Layout/FlippedCustomScript@NodeId"
+                  Children:
+                  - Name: Mode
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ns=7;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Snap"
           - Name: EventArguments
             Type: MouseClickEvent
             Children:
