@@ -697,7 +697,6 @@ Children:
     - Name: Enabled
       Type: BaseDataVariableType
       DataType: Boolean
-      Value: true
     - Name: Duration
       Type: BaseDataVariableType
       DataType: Duration
