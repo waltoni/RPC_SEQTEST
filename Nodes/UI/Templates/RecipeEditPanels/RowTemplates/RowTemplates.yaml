@@ -8315,7 +8315,7 @@ Children:
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 200.0
+    Value: -1.0
   - Name: Height
     Type: BaseVariableType
     DataType: Size
@@ -8364,34 +8364,6 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
-    Children:
-    - Name: ExpressionEvaluator1
-      Type: ExpressionEvaluator
-      Children:
-      - Name: Expression
-        Type: BaseDataVariableType
-        DataType: String
-        ReferenceType: HasParameter
-        ModellingRule: Optional
-        Value: "{0}||{1}"
-      - Name: ns=7;Source0
-        Type: BaseDataVariableType
-        DataType: BaseDataType
-        ReferenceType: HasSource
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RecipeEditVariables/RecipeInEdit"
-      - Name: ns=7;Source1
-        Type: BaseDataVariableType
-        DataType: BaseDataType
-        ReferenceType: HasSource
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RecipeEditVariables/NewRecipe"
   - Name: TopMargin
     Type: BaseVariableType
     DataType: Size
@@ -8404,7 +8376,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 200.0
+      Value: -1.0
     - Name: Height
       Type: BaseVariableType
       DataType: Size
@@ -8414,6 +8386,100 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
+    - Name: Switch2
+      Type: Switch
+      Children:
+      - Name: Checked
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Children:
+          - Name: Mode
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+          - Name: DynamicLinkFormatter
+            Type: StringFormatter
+            Children:
+            - Name: Format
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/LyrSheet.{0}"}
+            - Name: ns=7;Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Index"
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 80.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: -17.0
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "if((({0}>= {1}) && {2}),1,0)"
+          - Name: ns=7;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/numLyrs"
+          - Name: ns=7;Source1
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Index"
+          - Name: ns=7;Source2
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/_Options/Slipsheet"
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 35.0
     - Name: Rectangle1
       Type: Rectangle
       Children:
@@ -8681,6 +8747,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
+        Value: 2.0
       - Name: FillColor
         Type: BaseDataVariableType
         DataType: Color
@@ -8730,101 +8797,16 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
-  - Name: Switch2
-    Type: Switch
-    Children:
-    - Name: Checked
+    - Name: ContentAlignment
+      Type: BaseVariableType
+      DataType: ContentHorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: HorizontalGap
       Type: BaseDataVariableType
-      DataType: Boolean
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          ModellingRule: Optional
-          Value: 2
-        - Name: DynamicLinkFormatter
-          Type: StringFormatter
-          Children:
-          - Name: Format
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/LyrSheet.{0}"}
-          - Name: ns=7;Source0
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../../../Index"
-    - Name: Width
-      Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 80.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: -80.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: -17.0
-    - Name: Visible
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: true
-      Children:
-      - Name: ExpressionEvaluator1
-        Type: ExpressionEvaluator
-        Children:
-        - Name: Expression
-          Type: BaseDataVariableType
-          DataType: String
-          ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: "if((({0}>= {1}) && {2}),1,0)"
-        - Name: ns=7;Source0
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/RecipeEdit/numLyrs"
-        - Name: ns=7;Source1
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../../../Index"
-        - Name: ns=7;Source2
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "/Objects/RPC_SEQTEST/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/_Options/Slipsheet"
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 35.0
+      Value: 10.0
   - Name: Rectangle1
     Type: Rectangle
     Children:
@@ -8842,6 +8824,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
+      Value: 90.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
@@ -8884,6 +8867,10 @@ Children:
               DataType: NodePath
               Value: "../../../../../Index"
   - Name: FillColor
+    Type: BaseDataVariableType
+    DataType: Color
+    ModellingRule: Optional
+  - Name: BorderColor
     Type: BaseDataVariableType
     DataType: Color
     ModellingRule: Optional
