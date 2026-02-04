@@ -1996,7 +1996,7 @@ Children:
           - Name: Panel
             Type: NodePointer
             DataType: NodeId
-            Value: "/Objects/RPC_SEQTEST/UI/Templates/RecipeEditPanels/Custom"
+            Value: "/Objects/RPC_SEQTEST/UI/Templates/RecipeEditPanels/Preview"
             Children:
             - Name: Kind
               Type: PropertyType
@@ -2005,6 +2005,7 @@ Children:
           - Name: Visible
             Type: BaseDataVariableType
             DataType: Boolean
+            Value: true
           - Name: Enabled
             Type: BaseDataVariableType
             DataType: Boolean
@@ -3052,7 +3053,6 @@ Children:
             - Name: To
               Type: BaseDataVariableType
               DataType: Float
-              Value: 75.0
             - Name: Target
               Type: NodePointer
               DataType: NodeId
@@ -3061,23 +3061,14 @@ Children:
                 Type: PropertyType
                 DataType: NodeId
                 Value: "/Types/VariableTypes/BaseVariableType"
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../Opacity@NodeId"
             - Name: Running
               Type: BaseDataVariableType
               DataType: Boolean
-            - Name: From
-              Type: BaseDataVariableType
-              DataType: Float
-              ModellingRule: Optional
-              Value: 100.0
             - Name: Duration
               Type: BaseDataVariableType
               DataType: Int32
               ModellingRule: Optional
-              Value: 1000
+              Value: 5000
           - Name: NumberAnimation2
             Type: NumberAnimation
             Children:
@@ -3109,7 +3100,39 @@ Children:
               Type: BaseDataVariableType
               DataType: Int32
               ModellingRule: Optional
-              Value: 1000
+              Value: 750
+          - Name: NumberAnimation3
+            Type: NumberAnimation
+            Children:
+            - Name: To
+              Type: BaseDataVariableType
+              DataType: Float
+              Value: 100.0
+            - Name: Target
+              Type: NodePointer
+              DataType: NodeId
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/VariableTypes/BaseVariableType"
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../Opacity@NodeId"
+            - Name: Running
+              Type: BaseDataVariableType
+              DataType: Boolean
+            - Name: From
+              Type: BaseDataVariableType
+              DataType: Float
+              ModellingRule: Optional
+              Value: 75.0
+            - Name: Duration
+              Type: BaseDataVariableType
+              DataType: Int32
+              ModellingRule: Optional
+              Value: 750
         - Name: Opacity
           Type: BaseVariableType
           DataType: Float
@@ -7142,6 +7165,126 @@ Children:
             DataType: ResourceUri
             ModellingRule: Optional
             Value: "ns=36;%PROJECTDIR%/Images/EditIcon.png"
+        - Name: SequentialAnimation1
+          Type: SequentialAnimation
+          Children:
+          - Name: Running
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Children:
+            - Name: ExpressionEvaluator1
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Expression
+                Type: BaseDataVariableType
+                DataType: String
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: "!{0}"
+              - Name: ns=7;Source0
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/RPC_SEQTEST/Model/RecipeEdit/RecipeEditVariables/RecipeInEdit"
+          - Name: Loops
+            Type: BaseDataVariableType
+            DataType: Int32
+            ModellingRule: Optional
+            Value: -1
+          - Name: NumberAnimation1
+            Type: NumberAnimation
+            Children:
+            - Name: To
+              Type: BaseDataVariableType
+              DataType: Float
+            - Name: Target
+              Type: NodePointer
+              DataType: NodeId
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/VariableTypes/BaseVariableType"
+            - Name: Running
+              Type: BaseDataVariableType
+              DataType: Boolean
+            - Name: Duration
+              Type: BaseDataVariableType
+              DataType: Int32
+              ModellingRule: Optional
+              Value: 5000
+          - Name: NumberAnimation2
+            Type: NumberAnimation
+            Children:
+            - Name: To
+              Type: BaseDataVariableType
+              DataType: Float
+              Value: 75.0
+            - Name: Target
+              Type: NodePointer
+              DataType: NodeId
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/VariableTypes/BaseVariableType"
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../Opacity@NodeId"
+            - Name: Running
+              Type: BaseDataVariableType
+              DataType: Boolean
+            - Name: From
+              Type: BaseDataVariableType
+              DataType: Float
+              ModellingRule: Optional
+              Value: 100.0
+            - Name: Duration
+              Type: BaseDataVariableType
+              DataType: Int32
+              ModellingRule: Optional
+              Value: 750
+          - Name: NumberAnimation3
+            Type: NumberAnimation
+            Children:
+            - Name: To
+              Type: BaseDataVariableType
+              DataType: Float
+              Value: 100.0
+            - Name: Target
+              Type: NodePointer
+              DataType: NodeId
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/VariableTypes/BaseVariableType"
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../Opacity@NodeId"
+            - Name: Running
+              Type: BaseDataVariableType
+              DataType: Boolean
+            - Name: From
+              Type: BaseDataVariableType
+              DataType: Float
+              ModellingRule: Optional
+              Value: 75.0
+            - Name: Duration
+              Type: BaseDataVariableType
+              DataType: Int32
+              ModellingRule: Optional
+              Value: 750
+        - Name: Opacity
+          Type: BaseVariableType
+          DataType: Float
+          Value: 100.0
       - Name: CancelButton
         Type: Rectangle
         Children:
